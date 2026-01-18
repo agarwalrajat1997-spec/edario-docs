@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Edario Onboarding Docs (Interactive)</title>
+
+  <!-- CSS (split files) -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/steps.css" />
+  <link rel="stylesheet" href="css/overrides.css" />
+</head>
+
+<body>
+  <div class="app">
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="brand" id="brandHome" title="Go to Start screen">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <h1>Edario Docs</h1>
+          <p>Onboarding + data + Magnetboard</p>
+        </div>
+      </div>
+
+      <div class="sidebar-tools">
+        <div class="search">
+          <input id="searchInput" placeholder="Search docs…" autocomplete="off" />
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 21l-4.3-4.3m1.3-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <button class="btn-mini" id="toggleSidebarHelp" title="Keyboard tips">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 18h.01M9.09 9a3 3 0 115.82 1c-.79.62-1.41 1.16-1.41 2v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 22a10 10 0 100-20 10 10 0 000 20z" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="nav-title">Main</div>
+
+      <div class="nav-groups" id="docNav">
+        <!-- GROUP 1: Setting up the Wizard -->
+<div class="nav-group" data-group="wizard">
+          <button class="group-head" data-group-toggle="wizard" type="button">
+            <div class="group-left">
+              <span class="dot" data-group-dot="wizard"></span>
+              <div class="group-label">
+                <strong>Setting up the Wizard</strong>
+                <span>Define grid → upload → constraints → students</span>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="badge" data-group-badge="wizard">0%</span>
+              <svg class="caret" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </button>
+
+          <div class="group-children">
+            <a href="#school-setup" class="nav-item" data-section="school-setup">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>School Setup</strong>
+                  <span>School info + global caps</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="school-setup">0%</span>
+            </a>
+
+            <a href="#schedule-structure" class="nav-item" data-section="schedule-structure">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Schedule Structure</strong>
+                  <span>Type, periods, lunches</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="schedule-structure">0%</span>
+            </a>
+
+            <a href="#uploading-data" class="nav-item" data-section="uploading-data">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Uploading Data</strong>
+                  <span>SIS import flow (wizard)</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="uploading-data">0%</span>
+            </a>
+
+            <a href="#department-supervisors" class="nav-item" data-section="department-supervisors">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Departments & Roles</strong>
+                  <span>Owners & permissions</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="department-supervisors">0%</span>
+            </a>
+
+            <a href="#data-cleaning" class="nav-item" data-section="data-cleaning">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Data Cleaning</strong>
+                  <span>Duplicates & validation</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="data-cleaning">0%</span>
+            </a>
+
+            <a href="#edit-constraints" class="nav-item" data-section="edit-constraints">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Edit Constraints</strong>
+                  <span>Availability, caps, eligibility</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="edit-constraints">0%</span>
+            </a>
+
+            <a href="#create-sections" class="nav-item" data-section="create-sections">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Create Sections</strong>
+                  <span>Offerings + labels/teams</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="create-sections">0%</span>
+            </a>
+
+            <a href="#place-sections" class="nav-item" data-section="place-sections">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Place Sections</strong>
+                  <span>Manual anchors → review</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="place-sections">0%</span>
+            </a>
+
+            <a href="#schedule-students" class="nav-item" data-section="schedule-students">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Schedule Students</strong>
+                  <span>Requests → rosters</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="schedule-students">0%</span>
+            </a>
+
+            <a href="#report-a-bug" class="nav-item" data-section="report-a-bug">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Report a Bug</strong>
+                  <span>Fast support checklist</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="report-a-bug">0%</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- GROUP 2: Managing School Data -->
+        <div class="nav-group" data-group="data">
+          <button class="group-head" data-group-toggle="data" type="button">
+            <div class="group-left">
+              <span class="dot" data-group-dot="data"></span>
+              <div class="group-label">
+                <strong>Managing School Data</strong>
+                <span>Courses, teachers, students, requests, sections</span>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="badge" data-group-badge="data">0%</span>
+              <svg class="caret" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </button>
+
+          <div class="group-children">
+            <a href="#data-courses" class="nav-item" data-section="data-courses">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Courses</strong>
+                  <span>Offerings catalog</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="data-courses">0%</span>
+            </a>
+
+            <a href="#data-teachers" class="nav-item" data-section="data-teachers">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Teachers</strong>
+                  <span>Roster + departments</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="data-teachers">0%</span>
+            </a>
+
+            <a href="#data-classrooms" class="nav-item" data-section="data-classrooms">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Classrooms</strong>
+                  <span>Rooms + types</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="data-classrooms">0%</span>
+            </a>
+
+            <a href="#data-students" class="nav-item" data-section="data-students">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Students</strong>
+                  <span>Student roster</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="data-students">0%</span>
+            </a>
+
+            <a href="#data-requests" class="nav-item" data-section="data-requests">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Requests</strong>
+                  <span>Student requests table</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="data-requests">0%</span>
+            </a>
+
+            <a href="#data-sections" class="nav-item" data-section="data-sections">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Sections</strong>
+                  <span>Section records</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="data-sections">0%</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- GROUP 3: Magnetboard -->
+        <div class="nav-group" data-group="magnetboardGroup">
+          <button class="group-head" data-group-toggle="magnetboardGroup" type="button">
+            <div class="group-left">
+              <span class="dot" data-group-dot="magnetboardGroup"></span>
+              <div class="group-label">
+                <strong>Magnetboard</strong>
+                <span>Final visual edits + lock-in</span>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span class="badge" data-group-badge="magnetboardGroup">0%</span>
+              <svg class="caret" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </button>
+
+          <div class="group-children">
+            <a href="#magnetboard" class="nav-item" data-section="magnetboard">
+              <div class="nav-left">
+                <div class="nav-label">
+                  <strong>Magnetboard & Finalize</strong>
+                  <span>Drag, swap, QA</span>
+                </div>
+              </div>
+              <span class="badge" data-badge="magnetboard">0%</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main>
+      <div class="topbar">
+        <div class="crumb">
+          <div class="path" id="crumbPath">Docs / Start</div>
+          <h2 id="pageTitle">Start</h2>
+        </div>
+
+        <div class="top-actions">
+          <button class="btn primary" id="expandAll">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 7a3 3 0 013-3h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Expand All
+          </button>
+
+          <button class="btn" id="collapseAll">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 7a3 3 0 013-3h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Collapse all
+          </button>
+        </div>
+      </div>
+
+      <!-- Sections get injected here by js/core/sectionsLoader.js -->
+      <div class="wrap" id="sectionsRoot">
+        <div class="panel">
+          <div class="steps content">
+            <p class="muted">Loading…</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JS (loads sections + initializes app) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

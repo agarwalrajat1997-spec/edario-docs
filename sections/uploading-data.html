@@ -1,0 +1,1354 @@
+﻿<!-- =======================================================
+  UPLOADING DATA (Wizard) — SAME STYLE AS YOUR STEP SYSTEM
+  - 3 main steps:
+    1) Choose SIS
+    2) What to upload (inner wizard, SIS-conditional)
+    3) How to upload (inner wizard, SIS-conditional)
+  - No new CSS needed.
+  - SIS branching relies on toggling [hidden] on wrappers.
+======================================================= -->
+
+<section class="doc-section" id="uploading-data" data-title="Uploading Data" data-path="Setting up the Wizard / Uploading Data">
+  <div class="panel">
+    <div class="panel-header">
+      <div class="meta">
+        <strong>Uploading Data (Wizard)</strong>
+        <span>Choose SIS → see exact upload checklist + steps</span>
+      </div>
+      <div class="progress-pill">
+        <div class="bar"><i data-progressbar="uploading-data"></i></div>
+        <div class="pct" data-progress="uploading-data">0%</div>
+      </div>
+    </div>
+
+    <div class="steps content" data-steps="uploading-data">
+
+      <!-- =========================
+        STEP 1 — CHOOSE SIS
+      ========================== -->
+      <div class="step" data-step="1" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-title">
+              <strong>Choose your SIS</strong>
+              <span>This decides the exact upload flow below</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Select the system your school currently uses. Steps 2 and 3 will automatically show the correct
+            mini-wizard for your SIS.
+          </p>
+
+          <div class="media-slot" data-inner-steps="uploading-data-step1" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 1.1 ========= -->
+            <div data-inner-step="1">
+              <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+
+                <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+                
+
+                  <div class="callout" style="margin:0;">
+                    <small><span class="muted">
+                      <p style="margin:0;"><strong>Pick your SIS</strong></p>
+                    </span></small>
+
+                    <div style="margin-top:10px; display:flex; flex-direction:column; gap:10px;">
+                      <label style="display:flex; gap:10px; align-items:flex-start;">
+                        <input type="radio" name="sis-choice" value="genesis" data-sis-choice="genesis">
+                        <span><strong>Genesis</strong><br><span class="muted">Use Genesis-specific exports and steps.</span></span>
+                      </label>
+
+                      <label style="display:flex; gap:10px; align-items:flex-start;">
+                        <input type="radio" name="sis-choice" value="generic" data-sis-choice="generic">
+                        <span><strong>PowerSchool / Infinite Campus / Skyward / Aspen / Other</strong><br>
+                          <span class="muted">Use the generic CSV templates + mapping workflow.</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+         
+                </div>
+
+                <div style="width:100%; max-width:520px;">
+                  <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      style="width:100%; height:100%; display:block;"
+                      src="assets/videos/choose-sis.mp4">
+                      Sorry, your browser doesn’t support embedded videos.
+                    </video>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="btn-row" style="margin-top:14px;">
+                <button class="btn-solid ok" data-complete type="button">Confirm SIS</button>
+                <button class="btn-solid ghost" data-jump="uploading-data" type="button">Next: What to Upload</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- =========================
+        STEP 2 — WHAT TO UPLOAD (CONDITIONAL MINI WIZARD)
+      ========================== -->
+      <div class="step" data-step="2" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-title">
+              <strong>What to upload</strong>
+              <span>Required + recommended data files</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            This checklist depends on your SIS choice. Only one flow will be visible below.
+          </p>
+
+         <!-- =========================
+      SIS FLOW: GENERIC (NON-GENESIS)
+    ========================== -->
+<div data-sis-flow="generic" hidden>
+  <div class="media-slot" data-inner-steps="what-to-upload-generic" style="margin-top:14px;">
+
+    <!-- ========= GENERIC 2.1 ========= -->
+    <div data-inner-step="1">
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>2.1 — Excel files to request from your SIS</strong>
+            <small><span class="muted">
+              <p>Contact your SIS support/rep and request the following Excel exports.</p>
+              <p><span class="red-text">The order of the columns in these files is NOT important.</span></p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Course Data</strong></small>
+            <ul style="margin:8px 0 0 18px;">
+              <li>Course Code</li>
+              <li>Course Name</li>
+              <li>Credits</li>
+              <li>Department</li>
+              <li>Elective/Non-elective</li>
+              <li>Course Length (Full Year, Semester, Quarter)</li>
+            </ul>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Last Year&rsquo;s Sections</strong></small>
+            <ul style="margin:8px 0 0 18px;">
+              <li>Semester</li>
+              <li>Course</li>
+              <li>Course Name</li>
+              <li>Room(s)</li>
+              <li>Teacher(s)</li>
+              <li>Credits</li>
+              <li>Beginning Seats</li>
+            </ul>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Student Data</strong></small>
+            <ul style="margin:8px 0 0 18px;">
+              <li>Student ID</li>
+              <li>Next Year Grade Level</li>
+              <li>Last Name</li>
+              <li>First Name</li>
+              <li>Gender</li>
+              <li>Has Active IEP</li>
+            </ul>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Student Requests</strong></small>
+            <ul style="margin:8px 0 0 18px;">
+              <li>Student ID</li>
+              <li>School Code</li>
+              <li>Course Code</li>
+              <li>Course Name</li>
+              <li>Alternate Course Code (only if students select alternate courses for their electives)</li>
+              <li>Next Grade Level</li>
+            </ul>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Ask your SIS rep to include stable IDs and to export one school at a time.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/generic-required-files.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev disabled>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 2.2 ========= -->
+    <div data-inner-step="2" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>2.2 — Quick checklist before uploading</strong>
+            <small><span class="muted">
+              <p>Before you upload into Edario, quickly confirm these items:</p>
+              <ul style="margin:8px 0 0 18px;">
+                <li>Each file contains the fields listed in Step 2.1 (extra columns are okay).</li>
+                <li>IDs are present and consistent (Student ID, Course Code, School Code as applicable).</li>
+                <li>Headers are not renamed unless your mapping step expects it.</li>
+                <li>Files are saved as .xlsx or .csv (either is fine).</li>
+              </ul>
+              <p>If something looks wrong, fix the export at the source and re-export rather than editing row-by-row.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Upload core data first, then validate before moving to the next file.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/generic-recommended-files.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid ok" data-complete type="button">Done: What to upload</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =========================
+      SIS FLOW: GENESIS
+    ========================== -->
+<div data-sis-flow="genesis" hidden>
+  <div class="media-slot" data-inner-steps="what-to-upload-genesis" style="margin-top:14px;">
+
+    <!-- ========= GENESIS 2.1 ========= -->
+    <div data-inner-step="1">
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>2.1 — Excel files you&rsquo;ll export from Genesis</strong>
+            <small><span class="muted">
+              <p>You&rsquo;ll export the same core files from Genesis (using Curriculum/Sections and Report Writer reports).</p>
+              <p><span class="red-text">The order of the columns in these files is NOT important.</span></p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Course Data</strong></small>
+            <ul style="margin:8px 0 0 18px;">
+              <li>Course Code</li>
+              <li>Course Name</li>
+              <li>Credits</li>
+              <li>Department</li>
+              <li>Elective/Non-elective</li>
+              <li>Course Length (Full Year, Semester, Quarter)</li>
+            </ul>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Last Year&rsquo;s Sections</strong></small>
+            <ul style="margin:8px 0 0 18px;">
+              <li>Semester</li>
+              <li>Course</li>
+              <li>Course Name</li>
+              <li>Room(s)</li>
+              <li>Teacher(s)</li>
+              <li>Credits</li>
+              <li>Beginning Seats</li>
+            </ul>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Student Data</strong></small>
+            <ul style="margin:8px 0 0 18px;">
+              <li>Student ID</li>
+              <li>Next Year Grade Level</li>
+              <li>Last Name</li>
+              <li>First Name</li>
+              <li>Gender</li>
+              <li>Has Active IEP</li>
+            </ul>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Student Requests</strong></small>
+            <ul style="margin:8px 0 0 18px;">
+              <li>Student ID</li>
+              <li>School Code</li>
+              <li>Course Code</li>
+              <li>Course Name</li>
+              <li>Alternate Course Code (only if students select alternate courses for their electives)</li>
+              <li>Next Grade Level</li>
+            </ul>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Keep one folder per year (and per school) so your exports don&rsquo;t get mixed.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/genesis-required-files.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev disabled>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 2.2 ========= -->
+    <div data-inner-step="2" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>2.2 — Quick checklist before uploading</strong>
+            <small><span class="muted">
+              <p>Before uploading your Genesis exports into Edario, confirm:</p>
+              <ul style="margin:8px 0 0 18px;">
+                <li>Exports are from the correct year (and last year for Last Year&rsquo;s Sections).</li>
+                <li>Student Requests and Student Data reports include the added Report Writer fields you need.</li>
+                <li>IDs are present and consistent (Student ID, Course Code, School Code as applicable).</li>
+                <li>Files are saved as .xlsx or .csv (either is fine).</li>
+              </ul>
+              <p>If something looks wrong, re-run the export/report rather than editing row-by-row.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. After each upload, scan the preview for missing IDs, blank columns, or unexpected duplicates.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/genesis-upload-checklist.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid ok" data-complete type="button">Done: What to upload</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+        </div>
+      </div>
+
+
+      <!-- =========================
+        STEP 3 — HOW TO UPLOAD (CONDITIONAL MINI WIZARD)
+      ========================== -->
+      <div class="step" data-step="3" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-title">
+              <strong>How to upload</strong>
+              <span>Export → upload → map → validate</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Follow the mini wizard for your SIS. Keep the order: <strong>export → upload → validate</strong>.
+          </p>
+
+       <!-- =========================
+      SIS FLOW: GENESIS
+    ========================== -->
+<div data-sis-flow="genesis" hidden>
+  <div class="media-slot" data-inner-steps="how-to-upload-genesis" style="margin-top:14px;">
+
+    <!-- ========= GENESIS 3.1 ========= -->
+    <div data-inner-step="1">
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.1 — Log in to Genesis</strong>
+            <small><span class="muted">
+              <p>Sign in to Genesis using your district credentials.</p>
+              <p>If you have multiple schools, confirm you&rsquo;re in the correct school instance before exporting.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Use a single browser window to avoid exporting from the wrong school/year.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/genesis/logon_to_genesis.png"
+              alt="log on to genesis"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev disabled>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.2 ========= -->
+    <div data-inner-step="2" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.2 — Choose the correct school year</strong>
+            <small><span class="muted">
+              <p>Before exporting, change the year dropdown in the top left to the year you want to schedule.</p>
+              <p>For last year sections, you&rsquo;ll switch to last year&rsquo;s school year later in that flow.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Write down the year you selected so you don&rsquo;t mix exports across years.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/genesis/download_courses/select_year.png"
+              alt="select year"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.3 ========= -->
+    <div data-inner-step="3" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.3 — Export Courses (navigate to Curriculum)</strong>
+            <small><span class="muted">
+              <p>Click the <strong>Scheduling</strong> tab, then click <strong>Curriculum</strong>.</p>
+              <p>This is where you can pull the full course list and export it to Excel.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. If you don&rsquo;t see Curriculum, confirm your account has scheduling permissions.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/genesis-courses-navigate.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.4 ========= -->
+    <div data-inner-step="4" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.4 — Export Courses (search &amp; download Excel)</strong>
+            <small><span class="muted">
+              <p>Without typing any search terms, click <strong>Search</strong> to load all courses.</p>
+              <p>Then click the <strong>Excel</strong> icon in the top-right to download the file.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Save your export files in one folder (e.g., <em>Genesis_Exports_2026</em>) to stay organized.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/genesis-courses-export-excel.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.5 ========= -->
+    <div data-inner-step="5" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.5 — Check Course file columns</strong>
+            <small><span class="muted">
+              <p>Open the downloaded Course Excel file.</p>
+              <p><span class="red-text">The order of the columns is NOT important</span>, but confirm you have: Code, Description, Credits, Type, Department, Course Length.</p>
+              <p>Any columns labeled as <strong>--</strong> are not important (you can keep them).</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. If columns are missing, re-export&mdash;don&rsquo;t manually recreate data unless absolutely necessary.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/genesis/download_courses/check_columns.png"
+              alt="check course columns"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.6 ========= -->
+    <div data-inner-step="6" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.6 — Export Last Year&rsquo;s Sections</strong>
+            <small><span class="muted">
+              <p>Switch the year dropdown to <strong>last year</strong>.</p>
+              <p>Click <strong>Scheduling</strong> &rarr; <strong>Sections</strong>, then click <strong>Search</strong> to load all sections.</p>
+              <p>Click the <strong>Excel</strong> icon to download the export.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Sections often include multiple rooms/teachers&mdash;export them as-is.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/genesis-sections-export.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.7 ========= -->
+    <div data-inner-step="7" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.7 — Check Sections file columns</strong>
+            <small><span class="muted">
+              <p>Open the Sections Excel file and confirm the required data exists.</p>
+              <p><span class="red-text">The order of the columns is NOT important</span>, but confirm you have: Semester, Course, Course Description, Rooms, Teachers, Credits, Beginning Seats.</p>
+              <p>Any columns labeled as <strong>--</strong> are not important (you can keep them).</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. If your export has blanks for Rooms or Teachers, check if those are stored elsewhere in your Genesis configuration.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/genesis/download_previous_sections/check_columns.png"
+              alt="check sections columns"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.8 ========= -->
+    <div data-inner-step="8" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.8 — Export Student Requests (Report Writer)</strong>
+            <small><span class="muted">
+              <p>Go to <strong>Next Year Scheduling</strong> &rarr; <strong>Reports</strong>.</p>
+              <p>Create a <strong>Report Writer Report</strong> using the <strong>StudentRequest</strong> template.</p>
+              <p>Add columns: <strong>courseDescription</strong>, <strong>alternateCourseCode</strong>, <strong>nextGradeLevel</strong>.</p>
+              <p>Run the report with output format <strong>XLSX</strong>, then download the file.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Save field changes so you can re-run this export without rebuilding the report.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/genesis-student-requests-report-writer.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.9 ========= -->
+    <div data-inner-step="9" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.9 — Check Student Requests file columns</strong>
+            <small><span class="muted">
+              <p>Open the downloaded Student Requests Excel file.</p>
+              <p><span class="red-text">The order of the columns is NOT important</span>, but confirm you have: Student ID, School Code, Course Code, Course Description, Alternate Course Code, Next Grade Level.</p>
+              <p>Any columns labeled as <strong>--</strong> are not important (you can keep them).</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Student ID + Course Code are the most important keys for matching requests.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/genesis/download_student_requests/check_columns.png"
+              alt="check student requests columns"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.10 ========= -->
+    <div data-inner-step="10" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.10 — Export Students (Report Writer + Filters)</strong>
+            <small><span class="muted">
+              <p>Go to <strong>Next Year Scheduling</strong> &rarr; <strong>Reports</strong> and create a Report Writer Report using the <strong>Student</strong> template.</p>
+              <p>Remove <strong>schoolCode</strong>. Add fields: <strong>nextSchoolCode</strong>, <strong>nextGradeLevel</strong>, <strong>lastName</strong>, <strong>firstName</strong>, <strong>gender</strong>, <strong>hasActiveIEP</strong>.</p>
+              <p>Add a filter on <strong>Next School Code</strong> using your SCHOOL_CODE macro, then output as <strong>XLSX</strong> and download.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Filtering prevents pulling students who are not returning next year.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/genesis-students-report-writer.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.11 ========= -->
+    <div data-inner-step="11" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.11 — Check Students file columns</strong>
+            <small><span class="muted">
+              <p>Open the downloaded Students Excel file and confirm the required fields exist.</p>
+              <p><span class="red-text">The order of the columns is NOT important</span>, but confirm you have: Student ID, Next School Code, Next Grade Level, Last Name, First Name, Gender, Has Active IEP.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. If Enrollment Status is included, keep it&mdash;it can help troubleshoot missing students later.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/genesis/download_students/check_columns.png"
+              alt="check students columns"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.12 ========= -->
+    <div data-inner-step="12" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.12 — Upload files in Edario (recommended order)</strong>
+            <small><span class="muted">
+              <p>Upload in this order: <strong>Students</strong> &rarr; <strong>Courses</strong> &rarr; <strong>Sections</strong> &rarr; <strong>Student Requests</strong>.</p>
+              <p>After each upload, scan the preview for missing IDs, blank columns, or unexpected duplicates.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Fix errors immediately; don&rsquo;t continue uploads on broken base data.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/genesis/upload_into_edario.png"
+              alt="upload into edario"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENESIS 3.13 ========= -->
+    <div data-inner-step="13" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.13 — Validate &amp; resolve issues</strong>
+            <small><span class="muted">
+              <p>Run validation after uploads. Resolve missing teacher links, missing course codes, or unmatched rosters.</p>
+              <p>When validation passes, you&rsquo;re ready to proceed with scheduling.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Most issues come from IDs or mismatched course/section keys.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/genesis-validate.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid ok" data-complete type="button">Done: Uploading Data</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+            </div>
+          </div>
+
+
+      <!-- =========================
+        SIS FLOW: GENERIC (NON-GENESIS)
+      ========================== -->
+<div data-sis-flow="generic" hidden>
+  <div class="media-slot" data-inner-steps="how-to-upload-generic" style="margin-top:14px;">
+
+    <!-- ========= GENERIC 3.1 ========= -->
+    <div data-inner-step="1">
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.1 — Contact SIS support</strong>
+            <small><span class="muted">
+              <p>Reach out to your <span data-sis-name>SIS</span> rep/support and request exports for Edario.</p>
+              <p>Ask for the exports as CSV/Excel. The order of columns is not important.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Support details</strong></small>
+            <div style="height:8px; line-height:8px; font-size:8px;">&nbsp;</div>
+
+            <div style="display:flex; gap:12px; align-items:center;">
+              <img
+                src="assets/images/sis-logos/sis-logo-placeholder.jpg"
+                data-sis-logo
+                alt="sis logo"
+                style="width:56px; height:56px; border-radius:12px; object-fit:cover; flex:0 0 auto;"
+              />
+              <div style="min-width:0;">
+                <div><strong>Email:</strong> <span data-sis-email>support@your-sis.com</span></div>
+                <div><strong>Phone:</strong> <span data-sis-phone>+1 (000) 000-0000</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. If you don&rsquo;t have a direct rep, ask your district SIS admin for the correct export templates.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/generic-contact-support.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+       <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev disabled>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.2 ========= -->
+    <div data-inner-step="2" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.2 — Request Course Data export</strong>
+            <small><span class="muted">
+              <p>Ask for a CSV/Excel file containing all course definitions.</p>
+              <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
+              <ul>
+                <li>Course Code</li>
+                <li>Course Name</li>
+                <li>Credits</li>
+                <li>Department</li>
+                <li>Elective/Non-elective</li>
+                <li>Course Length (Full Year, Semester, Quarter)</li>
+              </ul>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Keep headers stable year-to-year so mapping becomes a one-time setup.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/generic-course-export.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.3 ========= -->
+    <div data-inner-step="3" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.3 — Upload Course Data into Edario</strong>
+            <small><span class="muted">
+              <p>Once you&rsquo;ve confirmed the export includes the required columns, upload it into Edario.</p>
+              <p>Drag-and-drop the file, or click the upload icon and select your saved CSV/Excel.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Don&rsquo;t rename headers unless your mapping step expects it.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/upload_into_edario_placeholder.png"
+              alt="upload into edario"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.4 ========= -->
+    <div data-inner-step="4" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.4 — Request Last Year&rsquo;s Sections export</strong>
+            <small><span class="muted">
+              <p>Ask for a CSV/Excel file containing the sections from the previous year.</p>
+              <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
+              <ul>
+                <li>Semester</li>
+                <li>Course</li>
+                <li>Course Name</li>
+                <li>Room(s)</li>
+                <li>Teacher(s)</li>
+                <li>Credits</li>
+                <li>Beginning Seats</li>
+              </ul>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Sections often contain multiple rooms/teachers&mdash;export those fields as-is.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/generic-sections-export.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.5 ========= -->
+    <div data-inner-step="5" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.5 — Upload Last Year&rsquo;s Sections into Edario</strong>
+            <small><span class="muted">
+              <p>Upload the sections export into Edario using drag-and-drop or the upload icon.</p>
+              <p>Confirm that identifiers (Course/Section fields) are consistent with your course data.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. If something doesn&rsquo;t match, fix the CSV and re-upload rather than editing row-by-row.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/upload_sections_placeholder.png"
+              alt="upload sections into edario"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.6 ========= -->
+    <div data-inner-step="6" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.6 — Request Student Data export</strong>
+            <small><span class="muted">
+              <p>Ask for a CSV/Excel file containing student data for next year (including incoming students).</p>
+              <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
+              <ul>
+                <li>Student ID</li>
+                <li>Next Year Grade Level</li>
+                <li>Last Name</li>
+                <li>First Name</li>
+                <li>Gender</li>
+                <li>Has Active IEP</li>
+              </ul>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Student ID must be stable&mdash;it&rsquo;s the primary key used for matching.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/generic-students-export.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.7 ========= -->
+    <div data-inner-step="7" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.7 — Upload Student Data into Edario</strong>
+            <small><span class="muted">
+              <p>Upload the student data export into Edario using drag-and-drop or the upload icon.</p>
+              <p>Confirm key fields are recognized correctly (especially Student ID and Grade Level).</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Keep one “master” student template per year and append updates over time.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/upload_students_placeholder.png"
+              alt="upload students into edario"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.8 ========= -->
+    <div data-inner-step="8" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.8 — Request Student Requests export</strong>
+            <small><span class="muted">
+              <p>Ask for a CSV/Excel file containing student requests for this year.</p>
+              <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
+              <ul>
+                <li>Student ID</li>
+                <li>School Code</li>
+                <li>Course Code</li>
+                <li>Course Name</li>
+                <li>Alternate Course Code (only if students select alternate courses for their electives)</li>
+                <li>Next Grade Level</li>
+              </ul>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Requests typically drive elective placement&mdash;don&rsquo;t skip alternate course fields if your school uses them.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/generic-requests-export.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.9 ========= -->
+    <div data-inner-step="9" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.9 — Upload Student Requests into Edario</strong>
+            <small><span class="muted">
+              <p>Upload the student requests export into Edario.</p>
+              <p>If mapping appears, match the request fields to Edario&rsquo;s expected columns and save the mapping.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. Mapping is usually a one-time setup once headers are standardized.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <img
+              src="assets/images/upload_requests_placeholder.png"
+              alt="upload student requests into edario"
+              style="width:100%; height:100%; display:block; object-fit:cover;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid" type="button" data-inner-next>Next</button>
+      </div>
+    </div>
+
+    <!-- ========= GENERIC 3.10 ========= -->
+    <div data-inner-step="10" hidden>
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
+
+          <div class="callout" style="margin:0;">
+            <strong>3.10 — Validate &amp; finalize</strong>
+            <small><span class="muted">
+              <p>Run validation and resolve missing matches (teacher links, course/section keys, roster mismatches).</p>
+              <p>When the validation checks pass, you&rsquo;re ready for scheduling workflows.</p>
+            </span></small>
+          </div>
+
+          <div class="callout" style="margin:0;">
+            <small><strong>Pro Tip</strong>. If something looks wrong, fix the CSV and re-upload rather than editing row-by-row.</small>
+          </div>
+
+        </div>
+
+        <div style="width:100%; max-width:520px;">
+          <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
+            <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+              style="width:100%; height:100%; display:block;"
+              src="assets/videos/generic-validate.mp4">
+              Sorry, your browser doesn&rsquo;t support embedded videos.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:14px;">
+        <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+        <button class="btn-solid ok" data-complete type="button">Done: Uploading Data</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /steps -->
+  </div><!-- /panel -->
+</section>

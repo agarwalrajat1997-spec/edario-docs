@@ -1,0 +1,44 @@
+/* Section switching */
+.doc-section{ display:none; }
+.doc-section.active{ display:block; }
+
+/* ===================== QUICK HIDE UI ===================== */
+
+/* 1) Remove step "Locked/Ready/Done" chip + the "Open" button */
+.step-right{ display:none !important; }
+
+/* Adjust spacing so header looks balanced without right controls */
+.step-head{ justify-content:flex-start !important; }
+.step-left{ width:100% !important; }
+
+/* 2) Remove all progress UI (bars + % pills everywhere) */
+.progress-pill,
+.bar,
+.pct{
+  display:none !important;
+}
+
+/* 3) Remove sidebar % badges (0% pills) */
+.badge,
+[data-badge],
+[data-group-badge]{
+  display:none !important;
+}
+/* Disable ALL "Finish/Complete" buttons (still visible) */
+button[data-complete]{
+  pointer-events: none !important;
+  cursor: default !important;
+  opacity: 0.55;              /* optional: look disabled */
+  filter: grayscale(0.15);    /* optional */
+}
+
+/* If some are <a> tags instead of <button> */
+a[data-complete]{
+  pointer-events: none !important;
+  cursor: default !important;
+  opacity: 0.55;
+}
+
+/* Optional: If you also want to hide the sidebar search completely, uncomment:
+.sidebar-tools .search{ display:none !important; }
+*/

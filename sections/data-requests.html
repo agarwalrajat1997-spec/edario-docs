@@ -1,0 +1,85 @@
+﻿<section class="doc-section" id="data-requests" data-title="Requests" data-path="Managing School Data / Requests">
+          <div class="panel">
+            <div class="panel-header">
+              <div class="meta">
+                <strong>Requests</strong>
+                <span>Requests table: demand signal for scheduling</span>
+              </div>
+              <div class="progress-pill">
+                <div class="bar"><i data-progressbar="data-requests"></i></div>
+                <div class="pct" data-progress="data-requests">0%</div>
+              </div>
+            </div>
+
+            <div class="steps content" data-steps="data-requests">
+              <div class="step" data-step="1">
+                <div class="step-head">
+                  <div class="step-left">
+                    <div class="step-num">1</div>
+                    <div class="step-title">
+                      <strong>Course code mapping check</strong>
+                      <span>Most common reason requests â€œdisappearâ€</span>
+                    </div>
+                  </div>
+                  <div class="step-right">
+                    <span class="chip locked" data-chip>Locked</span>
+                    <button class="btn-solid ghost" data-toggle>Open</button>
+                  </div>
+                </div>
+                <div class="step-body">
+                  <ul>
+                    <li>Requests course codes must match Courses exactly</li>
+                    <li>Student IDs must match Students exactly</li>
+                    <li>Verify alternates are included (if your school uses them)</li>
+                  </ul>
+                  <div class="btn-row">
+                   
+                  </div>
+                </div>
+              </div>
+
+              <div class="step" data-step="2" data-locked="true">
+                <div class="step-head">
+                  <div class="step-left">
+                    <div class="step-num">2</div>
+                    <div class="step-title">
+                      <strong>See Data â†’ Student Requests (example screen)</strong>
+                      <span>What â€œemptyâ€ looks like before upload</span>
+                    </div>
+                  </div>
+                  <div class="step-right">
+                    <span class="chip locked" data-chip>Locked</span>
+                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
+                  </div>
+                </div>
+                <div class="step-body">
+                  <p>
+                    This is the Requests table screen (before data is uploaded). After upload, you should see
+                    course codes, course names, departments, and # requests per course.
+                  </p>
+
+                  <!-- IMPORTANT:
+                       Put your attached screenshot file in the same folder as this HTML and name it:
+                       "student-requests-empty.png"
+                       OR change the src below to your own hosted URL.
+                  -->
+                  <div class="figure">
+                    <img class="shot" src="assets/images/student-requests-empty.png" alt="Student Requests: no results were found"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                    <div class="fallback">
+                      Screenshot not found. Save the attached Requests image as <span class="kbd">student-requests-empty.png</span>
+                      in the same folder as this HTML (or replace the <span class="kbd">src</span> with a URL).
+                    </div>
+                    <div class="figcap">
+                      Use this page to confirm: requests exist, departments look right, and the â€œ# Requestsâ€ column is non-zero.
+                    </div>
+                  </div>
+
+                  <div class="btn-row">
+                    <button class="btn-solid ok" data-complete>Finish Requests</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>

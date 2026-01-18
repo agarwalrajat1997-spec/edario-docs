@@ -1,0 +1,101 @@
+﻿<section class="doc-section" id="school-setup" data-title="School Setup" data-path="Setting up the Wizard / School Setup">
+          <div class="panel">
+            <div class="panel-header">
+              <div class="meta">
+                <strong>School Setup (Wizard Step 1)</strong>
+                <span>School info + global policy caps that affect feasibility</span>
+              </div>
+              <div class="progress-pill">
+                <div class="bar"><i data-progressbar="school-setup"></i></div>
+                <div class="pct" data-progress="school-setup">0%</div>
+              </div>
+            </div>
+
+            <div class="steps content" data-steps="school-setup">
+              <div class="step" data-step="1">
+                <div class="step-head">
+                  <div class="step-left">
+                    <div class="step-num">1</div>
+                    <div class="step-title">
+                      <strong>School Info</strong>
+                      <span>Name, code, and basic location details</span>
+                    </div>
+                  </div>
+                  <div class="step-right">
+                    <span class="chip locked" data-chip>Locked</span>
+                    <button class="btn-solid ghost" data-toggle>Open</button>
+                  </div>
+                </div>
+                <div class="step-body">
+                  <p>
+                    Enter your <strong>School Name</strong>, <strong>School Code</strong>, and basic location details.
+                    This anchors exports and schedule artifacts across the year selector.
+                  </p>
+                  <div class="callout">
+                    <strong>Best practice</strong>
+                    <small>
+                      Use the same School Code your SIS uses internally (or a stable abbreviation).
+                      Inconsistent codes create confusion later when multiple years are imported.
+                    </small>
+                  </div>
+
+                  
+                </div>
+              </div>
+
+              <div class="step" data-step="2" data-locked="true">
+                <div class="step-head">
+                  <div class="step-left">
+                    <div class="step-num">2</div>
+                    <div class="step-title">
+                      <strong>School Settings Questionnaire</strong>
+                      <span>Teacher workload caps + inclusion/ICR/ICS codes</span>
+                    </div>
+                  </div>
+                  <div class="step-right">
+                    <span class="chip locked" data-chip>Locked</span>
+                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
+                  </div>
+                </div>
+                <div class="step-body">
+                  <p>Set early global policy rules (they affect placement feasibility):</p>
+                  <ul>
+                    <li><strong>Max periods overall</strong> a teacher can teach in a day</li>
+                    <li><strong>Max periods in a row</strong> a teacher can teach</li>
+                    <li>Whether your school uses separate codes for <strong>Inclusion / ICR / ICS</strong></li>
+                  </ul>
+
+                  <div class="btn-row">
+                    
+                    <button class="btn-solid ghost" data-jump="schedule-structure">Next: Schedule Structure</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step" data-step="3" data-locked="true">
+                <div class="step-head">
+                  <div class="step-left">
+                    <div class="step-num">3</div>
+                    <div class="step-title">
+                      <strong>Quick verification</strong>
+                      <span>Two checks before moving on</span>
+                    </div>
+                  </div>
+                  <div class="step-right">
+                    <span class="chip locked" data-chip>Locked</span>
+                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
+                  </div>
+                </div>
+                <div class="step-body">
+                  <ul>
+                    <li>Confirm the year selector matches the year you are scheduling</li>
+                    <li>Confirm teacher caps match handbook/contract rules</li>
+                  </ul>
+                  <div class="btn-row">
+                    <button class="btn-solid ok" data-complete>Finish School Setup</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
