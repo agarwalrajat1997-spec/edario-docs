@@ -1,127 +1,1194 @@
 ﻿<section class="doc-section" id="edit-constraints" data-title="Edit Constraints" data-path="Setting up the Wizard / Edit Constraints">
-          <div class="panel">
-            <div class="panel-header">
-              <div class="meta">
-                <strong>Edit Constraints (Wizard Step 5)</strong>
-                <span>Availability, caps, eligibility, rooms</span>
-              </div>
-              <div class="progress-pill">
-                <div class="bar"><i data-progressbar="edit-constraints"></i></div>
-                <div class="pct" data-progress="edit-constraints">0%</div>
-              </div>
-            </div>
+  <div class="panel">
+    <div class="panel-header">
+      <div class="meta">
+        <strong>Edit Constraints (Wizard Step 5)</strong>
+        <span>Availability, caps, eligibility, rooms</span>
+      </div>
+      <div class="progress-pill">
+        <div class="bar"><i data-progressbar="edit-constraints"></i></div>
+        <div class="pct" data-progress="edit-constraints">0%</div>
+      </div>
+    </div>
 
-            <div class="steps content" data-steps="edit-constraints">
-              <div class="step" data-step="1">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">1</div>
-                    <div class="step-title">
-                      <strong>Teacher Availability</strong>
-                      <span>When teachers can/canâ€™t teach</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Define unavailable windows (duty, part-time, shared roles, etc.).</p>
-                  <div class="btn-row">
-                    
-                  </div>
-                </div>
-              </div>
+    <div class="steps content" data-steps="edit-constraints">
 
-              <div class="step" data-step="2" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">2</div>
-                    <div class="step-title">
-                      <strong>Course Availability</strong>
-                      <span>When courses can/canâ€™t run</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Prevent impossible placements (shared resources, district rules, etc.).</p>
-                  <div class="btn-row">
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="step" data-step="3" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">3</div>
-                    <div class="step-title">
-                      <strong>Course Caps</strong>
-                      <span>Max seat counts per section</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Set caps to protect class size limits before student scheduling.</p>
-                  <div class="btn-row">
-                   
-                  </div>
-                </div>
-              </div>
-
-              <div class="step" data-step="4" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">4</div>
-                    <div class="step-title">
-                      <strong>Course â†” Teacher Eligibility</strong>
-                      <span>Who can teach what</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Review/define eligibility. Prior-year sections can help prefill defaults.</p>
-                  <div class="btn-row">
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="step" data-step="5" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">5</div>
-                    <div class="step-title">
-                      <strong>Rooms: Classroom Details + Course Classrooms</strong>
-                      <span>Where courses can run</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Use room types and course-room rules for labs/gyms/special spaces.</p>
-                  <div class="btn-row">
-                    <button class="btn-solid ok" data-complete>Finish Edit Constraints</button>
-                    <button class="btn-solid ghost" data-jump="create-sections">Next: Create Sections</button>
-                  </div>
-                </div>
-              </div>
+      <!-- =========================
+        STEP 1 — Overview + Navigation & Status
+      ========================== -->
+      <div class="step open" data-step="1" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-title">
+              <strong>Overview</strong>
+              <span>What Edit Constraints controls &amp; how to navigate</span>
             </div>
           </div>
-        </section>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            <strong>Edit Constraints</strong> is where you review and configure the rules (&ldquo;constraints&rdquo;) that control how the scheduler
+            builds a valid timetable. This step is split into smaller sub-sections (left menu). Each sub-section turns a
+            different type of data rule into something the scheduler can enforce (availability, caps, room assignments, etc.).
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Where it appears</strong>. In the Scheduling Wizard, <strong>Edit Constraints is Step 5</strong> and contains multiple checkpoints.
+              Each item shows a <strong>green check</strong> when completed.
+            </small>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Year check</strong>. Confirm you&rsquo;re working in the correct school year using the year dropdown (top-left),
+              e.g., <strong>2026&ndash;2027</strong>.
+            </small>
+          </div>
+
+          <div class="media-slot" style="margin-top:14px;">
+            <div class="grid-2" style="align-items:start; gap:14px;">
+
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <div class="callout" style="margin:0;">
+                  <strong>Navigation &amp; status</strong>
+                  <div class="muted">
+                    <ul>
+                      <li>The left panel lists constraint categories.</li>
+                      <li>Each category has a status indicator (green check = complete).</li>
+                      <li>You can enter categories in any order, but a recommended order is provided below.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <strong>Categories you&rsquo;ll configure</strong>
+                  <div class="muted">
+                    <ul>
+                      <li>Clean Duplicates</li>
+                      <li>Teacher Availability</li>
+                      <li>Course Availability</li>
+                      <li>Course Caps</li>
+                      <li>Course Options</li>
+                      <li>Course Other Options</li>
+                      <li>Course Teachers</li>
+                      <li>Classroom Details</li>
+                      <li>Course Classrooms</li>
+                      <li>Teacher Classrooms</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <strong>Recommended order (most schools)</strong>
+                  <div class="muted">
+                    <ol>
+                      <li>Clean Duplicates</li>
+                      <li>Teacher Availability</li>
+                      <li>Course Availability</li>
+                      <li>Course Caps</li>
+                      <li>Course Options / Course Other Options</li>
+                      <li>Course Teachers</li>
+                      <li>Classroom Details</li>
+                      <li>Course Classrooms</li>
+                      <li>Teacher Classrooms</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <small>
+                    <strong>Why this order works</strong>. Fix data issues first (duplicates), then lock people/time constraints (teacher availability),
+                    then define course constraints (course availability + caps + options), then map who teaches what, and finally restrict where classes can happen (rooms).
+                  </small>
+                </div>
+              </div>
+
+              <div>
+                <video
+                  controls
+                  loop
+                  autoplay
+                  muted
+                  playsinline
+                  preload="metadata"
+                  style="width:100%; max-width:520px; border-radius:14px; display:block;"
+                  src="assets/videos/edit-constraints-overview.mp4">
+                  Sorry, your browser doesn&rsquo;t support embedded videos.
+                </video>
+                <div class="muted" style="margin-top:8px; font-size:12px;">
+                  Replace <code>edit-constraints-overview.mp4</code> with your real filename.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-jump="department-supervisors" type="button">Back: Departments &amp; Roles</button>
+            <button class="btn-solid" data-toggle type="button">Next: Clean Duplicates</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 2 — Clean Duplicates (INNER WIZARD)
+        Mini steps 2.1 → 2.4
+      ========================== -->
+      <div class="step" data-step="2" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-title">
+              <strong>Clean Duplicates</strong>
+              <span>Resolve duplicate warnings so later scheduling doesn&rsquo;t break</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            After you Upload Data, the system automatically scans your school data and flags items that look like duplicates
+            (same/similar name, code, or other matching fields). Cleaning these upfront prevents common scheduling issues later.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Important</strong>. You must clear all duplicate warnings in this sub-section before you can move on to later screens in the wizard.
+            </small>
+          </div>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="edit-constraints-step2">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">What you&rsquo;ll see</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Option A: This is okay</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Option B: Delete + Clear</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Best practices</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="edit-constraints-step2" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 2.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.1 — What you&rsquo;ll see on the page</strong>
+                    <div class="muted">
+                      <ul>
+                        <li>Header: <strong>Clean Duplicates</strong> + a short subtitle about saving scheduling time later.</li>
+                        <li>A banner such as: <em>We&rsquo;ve found some data that could potentially be duplicate.</em></li>
+                        <li>A toggle: <strong>Show Instructions</strong> / <strong>Hide Instructions</strong>.</li>
+                        <li>Tabs grouping duplicates with count badges:
+                          <ul>
+                            <li>Courses (e.g., 28)</li>
+                            <li>Teachers (e.g., 1)</li>
+                            <li>Classrooms (e.g., 0)</li>
+                            <li>Students (e.g., 0)</li>
+                          </ul>
+                        </li>
+                        <li>Duplicate groups showing the suspected duplicate records in a mini table, with a trash icon per row.</li>
+                        <li>Group actions like <strong>This is okay</strong> and/or <strong>Clear</strong> (top-right of each group).</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Recommended start</strong>. Begin with the <strong>Courses</strong> tab (usually the biggest impact), then Teachers, Classrooms, Students.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Next: Option A</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Skip to: Option B</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/clean-duplicates-overview.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>clean-duplicates-overview.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.2 — Option A: Ignore duplicates (mark as acceptable)</strong>
+                    <div class="muted">
+                      <p>Use this when the flagged items are <strong>not actually duplicates</strong> or you intentionally want to keep them.</p>
+                      <ol>
+                        <li>Open a duplicate group and review the listed records.</li>
+                        <li>If everything looks correct, click <strong>This is okay</strong>.</li>
+                      </ol>
+                      <p><strong>Result</strong>: The group is acknowledged and no longer blocks you from continuing.</p>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>When to use</strong>. Two courses may look similar but differ by code, semester, credits, or department.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Option B</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Best practices</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/clean-duplicates-this-is-okay.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>clean-duplicates-this-is-okay.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.3 ========= -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.3 — Option B: Delete duplicates (remove unwanted records)</strong>
+                    <div class="muted">
+                      <p>Use this when one (or more) listed items are true duplicates and should be removed.</p>
+                      <ol>
+                        <li>In the duplicate group, click the <strong>trash</strong> icon next to the record you want to delete.</li>
+                        <li>Repeat for any other unwanted duplicates in that group.</li>
+                        <li>Click <strong>Clear</strong> for that group.</li>
+                      </ol>
+                      <p><strong>Result</strong>: The duplicates are removed and the group is cleared.</p>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Tip</strong>. Prefer keeping the record with the correct code, department, credits, and term (Semester/Quarter/Full Year).</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Next: Best practices</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: What you&rsquo;ll see</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/clean-duplicates-delete-clear.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>clean-duplicates-delete-clear.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.4 ========= -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.4 — Best practices (avoid mistakes)</strong>
+                    <div class="muted">
+                      <ul>
+                        <li><strong>Don&rsquo;t delete unless you&rsquo;re sure</strong>. Similar names can still be valid if codes/terms differ.</li>
+                        <li>If unsure, use <strong>This is okay</strong> temporarily and revisit after reviewing other data (but ideally resolve true duplicates now).</li>
+                        <li>Inconsistent naming (e.g., &ldquo;Algebra I CP&rdquo; twice) usually means one record is incomplete or incorrect.</li>
+                        <li>Confirm all groups are cleared (no remaining warnings) before proceeding.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Completion check</strong>. This sub-section is complete when all duplicate groups are cleared and the left menu shows a green check for Clean Duplicates.</small>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/clean-duplicates-best-practices.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>clean-duplicates-best-practices.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="edit-constraints-step2" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Availability</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 3 — Availability (INNER WIZARD)
+        Mini steps 3.1 → 3.2
+      ========================== -->
+      <div class="step" data-step="3" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-title">
+              <strong>Availability</strong>
+              <span>Teacher Availability &amp; Course Availability</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Availability constraints define <strong>when people can teach</strong> and <strong>when courses can run</strong>.
+            The scheduler will not place a teacher or course into times you mark as unavailable.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Note</strong>. Period labels come from Schedule Structure, so confirm Schedule Structure is final before doing detailed availability.
+            </small>
+          </div>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="edit-constraints-step3">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Teacher Availability</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Course Availability</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="edit-constraints-step3" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 3.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.1 — Teacher Availability</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Define when each teacher can/can&rsquo;t teach (blocked periods, days off, part-time patterns).</p>
+
+                      <p style="margin-top:10px;"><strong>What you&rsquo;ll see</strong>:</p>
+                      <ol>
+                        <li><strong>Department selection</strong>: &ldquo;Choose a department to work on&rdquo; with a status + <strong>Review</strong> button.</li>
+                        <li><strong>Availability grid</strong> inside a department:
+                          <ul>
+                            <li>Teacher rows + period columns (checkboxes)</li>
+                            <li><em>Unselect All</em> under a period (bulk clear that period)</li>
+                            <li><em>Unselect All</em> under a teacher (clear that teacher row)</li>
+                            <li>Red × to remove a teacher row from the department grid</li>
+                            <li><strong>Add A Teacher</strong> if someone is missing</li>
+                            <li>Optional supervisor chip + <strong>Add a Supervisor</strong></li>
+                          </ul>
+                        </li>
+                      </ol>
+
+                      <p style="margin-top:10px;"><strong>Recommended workflow</strong>:</p>
+                      <ol>
+                        <li>Click <strong>Review</strong> for a department.</li>
+                        <li>Uncheck periods a teacher cannot teach.</li>
+                        <li>Use bulk <em>Unselect All</em> sparingly to speed up edits.</li>
+                        <li>Add missing teachers; remove wrong ones; then go back and confirm department shows <strong>Complete</strong>.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Best practice</strong>. Avoid leaving a teacher with too few available periods&mdash;scheduling can fail due to lack of feasible placements.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Next: Course Availability</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/teacher-availability.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>teacher-availability.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 3.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.2 — Course Availability</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Define when specific courses can/can&rsquo;t run (only certain periods, not Fridays, Day A only, etc.).</p>
+
+                      <p style="margin-top:10px;"><strong>What you&rsquo;ll see</strong>:</p>
+                      <ol>
+                        <li><strong>Department selection</strong> list with status + <strong>Review</strong>.</li>
+                        <li><strong>Course availability grid</strong>:
+                          <ul>
+                            <li>Course rows (Course Name + Code)</li>
+                            <li>Period columns (checkboxes)</li>
+                            <li>Bulk <em>Unselect All</em> under a period (clears that period for all courses in view)</li>
+                            <li>Row <em>Unselect All</em> under a course (clear then re-check valid periods)</li>
+                            <li>Red × to remove a course row from the department grid</li>
+                          </ul>
+                        </li>
+                      </ol>
+
+                      <p style="margin-top:10px;"><strong>Recommended workflow</strong>:</p>
+                      <ol>
+                        <li>Click <strong>Review</strong> for a department.</li>
+                        <li>Leave checked only the periods where the course can run.</li>
+                        <li>Use bulk controls when many courses share the same restriction.</li>
+                        <li>Go back and confirm department shows <strong>Complete</strong>.</li>
+                      </ol>
+
+                      <p style="margin-top:10px;"><strong>Common use cases</strong>:</p>
+                      <ul>
+                        <li>Late Arrival (Period 1 only)</li>
+                        <li>Early Dismissal (Period 10 only)</li>
+                        <li>Lab courses restricted to earlier periods</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Best practice</strong>. Don&rsquo;t over-block a course (too few allowed periods) or the scheduler may not find a feasible placement.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Teacher Availability</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/course-availability.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>course-availability.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="edit-constraints-step3" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Course rules</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 4 — Course rules (INNER WIZARD)
+        Mini steps 4.1 → 4.4
+      ========================== -->
+      <div class="step" data-step="4" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">4</div>
+            <div class="step-title">
+              <strong>Course rules</strong>
+              <span>Caps, options, special flags, and who-teaches-what</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            These sub-sections define how courses behave in the schedule: how many students per section, how long a course runs,
+            special course flags (lunch/lab/not-in-schedule), and which teachers are eligible to teach each course.
+          </p>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="edit-constraints-step4">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Course Caps</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Course Options</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Course Other Options</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Course Teachers</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="edit-constraints-step4" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 4.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.1 — Course Caps</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Control enrollment limits and section limits for each course:</p>
+                      <ul>
+                        <li><strong>Max Students per Section</strong> (seat cap)</li>
+                        <li><strong>Max Number of Sections</strong> (section cap)</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>Workflow</strong>:</p>
+                      <ol>
+                        <li>Open a department via <strong>Review</strong>.</li>
+                        <li>Set <strong>Max Students per Section</strong> to realistic class size (e.g., 28, 30, 32).</li>
+                        <li>Leave <strong>Max Number of Sections</strong> as <em>None</em> unless you must restrict staffing/resources.</li>
+                      </ol>
+
+                      <p style="margin-top:10px;"><strong>How the two caps work</strong>:</p>
+                      <ul>
+                        <li>If demand is 56 and cap is 28, the system generally needs 2 sections (subject to other constraints).</li>
+                        <li>If you cap sections too low (e.g., max sections = 2 when demand needs 3), scheduling may fail or leave students unplaced.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Recommended default</strong>. Set student caps carefully; keep section caps as <em>None</em> unless you have a strong reason.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Next: Course Options</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/course-caps.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>course-caps.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 4.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.2 — Course Options</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Set key scheduling properties for each course:</p>
+                      <ul>
+                        <li><strong>Semester</strong> (FY / S1 / S2 / Q1 / Q2 &hellip;)</li>
+                        <li><strong>Elective</strong> vs <strong>Non-Elective</strong></li>
+                        <li><strong># Periods Spanned</strong> (1 for normal; 2+ for blocks/double periods)</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>Workflow</strong>:</p>
+                      <ol>
+                        <li>Review a department.</li>
+                        <li>Set term/semester accurately (FY only if it truly runs all year).</li>
+                        <li>Mark elective status for reporting and downstream rules.</li>
+                        <li>Set # periods spanned&mdash;block courses require contiguous back-to-back time.</li>
+                      </ol>
+
+                      <p style="margin-top:10px;"><strong>Common check</strong>: Special schedule items (Late Arrival / Early Dismissal / Advisory) should match their intended term and span.</p>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Best practice</strong>. If a course spans 2+ periods, confirm teacher availability + course availability + room rules can support contiguous time.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Course Caps</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Course Other Options</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/course-options.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>course-options.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 4.3 ========= -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.3 — Course Other Options</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Apply important course-level flags that affect how the scheduler treats special courses.</p>
+
+                      <p style="margin-top:10px;"><strong>Common flags you&rsquo;ll see</strong> (with info tooltips):</p>
+                      <ul>
+                        <li><strong>Is Lunch?</strong> &mdash; mark lunch-block courses</li>
+                        <li><strong>Is Inclusion?</strong> &mdash; support/inclusion course combined with general ed section</li>
+                        <li><strong>Needs Lab?</strong> &mdash; requires additional lab period(s)</li>
+                        <li><strong>Swappable for Lab?</strong> &mdash; can be missed to attend lab</li>
+                        <li><strong>Not in Schedule?</strong> &mdash; not physically timetabled (online/early dismissal/etc.)</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>Workflow</strong>:</p>
+                      <ol>
+                        <li>Review a department.</li>
+                        <li>Check only the flags that truly apply for each course.</li>
+                        <li>If you use lab flags, confirm your room rules support labs (Classroom Details + Course Classrooms).</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Best practice</strong>. Use <strong>Not in Schedule</strong> sparingly&mdash;overusing it can hide real scheduling needs.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Back: Course Options</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Next: Course Teachers</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/course-other-options.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>course-other-options.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 4.4 ========= -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.4 — Course Teachers</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Define which teachers are allowed to teach each course. The scheduler will only assign sections to eligible teachers listed here.</p>
+
+                      <p style="margin-top:10px;"><strong>What you&rsquo;ll see</strong>:</p>
+                      <ul>
+                        <li>Course cards (Course Name + Code)</li>
+                        <li>Teacher rows inside each course with role dropdown:
+                          <ul>
+                            <li><strong>Primary</strong></li>
+                            <li><strong>Back Up</strong></li>
+                          </ul>
+                        </li>
+                        <li>Controls to remove a teacher from a course (× on row)</li>
+                        <li><strong>Add Teacher Who Can Teach</strong> + search input</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>Workflow</strong>:</p>
+                      <ol>
+                        <li>Review a department.</li>
+                        <li>Ensure each course that will run has at least one <strong>Primary</strong> teacher.</li>
+                        <li>Add Back Up teachers for coverage/cross-trained staff.</li>
+                      </ol>
+
+                      <p style="margin-top:10px;"><strong>Troubleshooting signal</strong>: If you get unassigned sections later, check course eligibility here first (then teacher availability + course availability).</p>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Best practice</strong>. Do eligibility here (not later) so section creation and scheduling behave correctly from the start.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Back: Course Other Options</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Course Caps</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/course-teachers.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>course-teachers.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="edit-constraints-step4" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Rooms</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 5 — Rooms (INNER WIZARD)
+        Mini steps 5.1 → 5.3
+      ========================== -->
+      <div class="step" data-step="5" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">5</div>
+            <div class="step-title">
+              <strong>Rooms</strong>
+              <span>Room details, course room eligibility, teacher room preferences</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Room constraints determine where classes can happen. Start by defining room properties (capacity/type),
+            then restrict which rooms a course may use, and finally (optionally) add teacher room preferences.
+          </p>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="edit-constraints-step5">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Classroom Details</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Course Classrooms</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Teacher Classrooms</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="edit-constraints-step5" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 5.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>5.1 — Classroom Details</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Define room attributes so the scheduler can place sections into valid rooms.</p>
+                      <ul>
+                        <li><strong>Classroom Type</strong> (optional) &mdash; Science Lab / Music / Workshop / None</li>
+                        <li><strong>Max Capacity</strong> (important) &mdash; hard room capacity constraint</li>
+                        <li><strong>Allows Multiple Sections</strong> (rare) &mdash; e.g., Gym / large shared spaces</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>What you may see</strong>:</p>
+                      <ul>
+                        <li>Compact table view of rooms with dropdowns/checkboxes</li>
+                        <li><strong>Add A Classroom</strong> picker (search + Add)</li>
+                        <li>Optional detailed room editor:
+                          <ul>
+                            <li>Course(s) that <strong>NEED</strong> to be in this classroom (hard requirement)</li>
+                            <li>Teacher(s) who <strong>Prefer</strong> this classroom (soft preference)</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>Recommended workflow</strong>:</p>
+                      <ol>
+                        <li>Set accurate <strong>Max Capacity</strong> for all rooms.</li>
+                        <li>Assign <strong>Classroom Type</strong> for special spaces (labs/studios/workshops).</li>
+                        <li>Only enable <strong>Allows Multiple Sections</strong> when truly valid.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Best practice</strong>. Capacity mismatch is one of the most common causes of placement failures later.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Next: Course Classrooms</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/classroom-details.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>classroom-details.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 5.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>5.2 — Course Classrooms</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Set allowed rooms for specific courses (e.g., Chemistry &rarr; labs only).</p>
+
+                      <p style="margin-top:10px;"><strong>What you&rsquo;ll see</strong>:</p>
+                      <ul>
+                        <li>Course cards (Course Name + Code)</li>
+                        <li><strong>Add Classroom Restriction</strong> (adds allowed rooms)</li>
+                        <li>Room rows/pills showing classroom + type + department(s) + × to remove</li>
+                        <li><strong>Add A Course</strong> if a course is missing from the list</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>How to interpret</strong>:</p>
+                      <ul>
+                        <li>Restrictions = <strong>Allowed Rooms</strong> for that course.</li>
+                        <li>One room = very tight constraint.</li>
+                        <li>Multiple rooms = scheduler may choose any (recommended for labs/studios when you have multiple spaces).</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>Best practice</strong>: Don&rsquo;t over-restrict. Tight room constraints are a common reason schedules fail later.</p>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Classroom Details</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Teacher Classrooms</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/course-classrooms.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>course-classrooms.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 5.3 ========= -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>5.3 — Teacher Classrooms</strong>
+                    <div class="muted">
+                      <p><strong>Purpose</strong>: Set preferred classrooms (or classroom types) for each teacher. This is optional, but helps produce realistic placements.</p>
+
+                      <p style="margin-top:10px;"><strong>What you&rsquo;ll see</strong>:</p>
+                      <ul>
+                        <li>Teacher cards (teacher name)</li>
+                        <li><strong>Add Classroom Preference</strong> (search for room or room type)</li>
+                        <li>Preference rows/pills showing classroom + type + department(s) + × to remove</li>
+                        <li>Trash icon on a card to remove that teacher entry from this department view</li>
+                        <li><strong>Add A Teacher</strong> if missing</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>How it interacts with Course Classrooms</strong>:</p>
+                      <ul>
+                        <li><strong>Course Classrooms</strong> = hard allowed set (eligibility)</li>
+                        <li><strong>Teacher Classrooms</strong> = preference (used when multiple valid rooms exist)</li>
+                      </ul>
+
+                      <p style="margin-top:10px;"><strong>Best practice</strong>: Use teacher preferences for real-world patterns, but don&rsquo;t over-constrain unless your solver treats them as hard rules.</p>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Back: Course Classrooms</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Classroom Details</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/teacher-classrooms.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>teacher-classrooms.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="edit-constraints-step5" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Finish &amp; continue</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 6 — Completion standard + Continue
+      ========================== -->
+      <div class="step" data-step="6" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">6</div>
+            <div class="step-title">
+              <strong>Finish Edit Constraints</strong>
+              <span>Confirm green checks &amp; continue to Create Sections</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            A sub-section is considered <strong>complete</strong> when required fields are filled, there are no validation errors,
+            and the wizard marks it with a <strong>green check</strong> in the left menu.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <strong>Completion standard</strong>
+            <div class="muted">
+              <ul>
+                <li>All duplicates are cleared (Clean Duplicates shows a green check).</li>
+                <li>All departments you need are reviewed and marked complete for:
+                  <ul>
+                    <li>Teacher Availability</li>
+                    <li>Course Availability</li>
+                    <li>Course Caps</li>
+                    <li>Course Options</li>
+                    <li>Course Other Options</li>
+                    <li>Course Teachers</li>
+                    <li>Classroom Details</li>
+                    <li>Course Classrooms</li>
+                    <li>Teacher Classrooms</li>
+                  </ul>
+                </li>
+                <li>No validation errors remain in any sub-section.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Common &ldquo;why scheduling fails later&rdquo; checks</strong>. If you run into issues in Create Sections or scheduling:
+              confirm (1) every course has eligible teachers, (2) teachers are available, (3) courses have enough allowed periods, and (4) room caps/eligibility aren&rsquo;t overly strict.
+            </small>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ok" data-complete type="button">Finish Edit Constraints</button>
+            <button class="btn-solid" data-jump="create-sections" type="button">Next: Create Sections</button>
+            <button class="btn-solid ghost" data-jump="department-supervisors" type="button">Back: Departments &amp; Roles</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /steps -->
+  </div><!-- /panel -->
+</section>

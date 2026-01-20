@@ -1,87 +1,628 @@
 ﻿<section class="doc-section" id="create-sections" data-title="Create Sections" data-path="Setting up the Wizard / Create Sections">
-          <div class="panel">
-            <div class="panel-header">
-              <div class="meta">
-                <strong>Create Sections (Wizard Step 6)</strong>
-                <span>Section review, labels/teams, student labeling</span>
-              </div>
-              <div class="progress-pill">
-                <div class="bar"><i data-progressbar="create-sections"></i></div>
-                <div class="pct" data-progress="create-sections">0%</div>
-              </div>
-            </div>
+  <div class="panel">
+    <div class="panel-header">
+      <div class="meta">
+        <strong>Create Sections (Wizard Step 6)</strong>
+        <span>Section review, labels/teams, student labeling</span>
+      </div>
+      <div class="progress-pill">
+        <div class="bar"><i data-progressbar="create-sections"></i></div>
+        <div class="pct" data-progress="create-sections">0%</div>
+      </div>
+    </div>
 
-            <div class="steps content" data-steps="create-sections">
-              <div class="step" data-step="1">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">1</div>
-                    <div class="step-title">
-                      <strong>Section Review</strong>
-                      <span>Match demand to supply</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Confirm the right number of sections per course before placement.</p>
-                  <div class="btn-row">
-                   
-                  </div>
-                </div>
-              </div>
+    <div class="steps content" data-steps="create-sections">
 
-              <div class="step" data-step="2" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">2</div>
-                    <div class="step-title">
-                      <strong>Create Labels / Teams</strong>
-                      <span>Grouping logic youâ€™ll use later</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <ul>
-                    <li>Program tags (AP/IB/CTE)</li>
-                    <li>House teams / cohort rules</li>
-                    <li>Support structures (inclusion cohorts)</li>
-                  </ul>
-                  <div class="btn-row">
-                  
-                  </div>
-                </div>
-              </div>
-
-              <div class="step" data-step="3" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">3</div>
-                    <div class="step-title">
-                      <strong>Assign Student Labels</strong>
-                      <span>Apply labels to support grouping</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Assign labels early to avoid later manual fixes.</p>
-                  <div class="btn-row">
-                    <button class="btn-solid ok" data-complete>Finish Create Sections</button>
-                    <button class="btn-solid ghost" data-jump="place-sections">Next: Place Sections</button>
-                  </div>
-                </div>
-              </div>
+      <!-- =========================
+        STEP 1 — Overview + Sub-pages
+      ========================== -->
+      <div class="step open" data-step="1" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-title">
+              <strong>Overview</strong>
+              <span>What Create Sections does before scheduling</span>
             </div>
           </div>
-        </section>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            <strong>Create Sections</strong> is where you and the system collaborate to finalize what sections exist next year.
+            You will (1) review section counts and assignments, (2) create and apply teams/labels to sections, and then
+            (3) assign teams/labels to students for grouping logic.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Step 6 sub-pages</strong>. Create Sections includes:
+              <strong>Section Review</strong>, <strong>Create Labels</strong>, and <strong>Student Labels</strong>.
+            </small>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Recommended workflow</strong>. Review sections first (counts + teachers) &rarr; then create teams/labels &rarr;
+              finally assign labels to students.
+            </small>
+          </div>
+
+          <div class="media-slot" style="margin-top:14px;">
+            <div class="grid-2" style="align-items:start; gap:14px;">
+
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <div class="callout" style="margin:0;">
+                  <strong>Where to find it</strong>
+                  <div class="muted">
+                    <p>Scheduling Wizard &rarr; <strong>Step 6: Create Sections</strong></p>
+                    <p>Sub-pages are shown in the left navigation within Step 6.</p>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <strong>Completion standard</strong>
+                  <div class="muted">
+                    <ul>
+                      <li>Section Review completed for each department (as applicable).</li>
+                      <li>Any needed Teams/Labels created and applied to relevant sections.</li>
+                      <li>Student Labels applied where grouping is needed.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <video
+                  controls
+                  loop
+                  autoplay
+                  muted
+                  playsinline
+                  preload="metadata"
+                  style="width:100%; max-width:520px; border-radius:14px; display:block;"
+                  src="assets/videos/create-sections-overview.mp4">
+                  Sorry, your browser doesn&rsquo;t support embedded videos.
+                </video>
+                <div class="muted" style="margin-top:8px; font-size:12px;">
+                  Replace <code>create-sections-overview.mp4</code> with your real filename.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-jump="edit-constraints" type="button">Back: Edit Constraints</button>
+            <button class="btn-solid" data-toggle type="button">Next: Section Review</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 2 — Section Review (INNER WIZARD)
+        Mini steps 2.1 → 2.5
+      ========================== -->
+      <div class="step" data-step="2" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-title">
+              <strong>Section Review</strong>
+              <span>Confirm section counts, teachers, and demand vs supply</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            <strong>Section Review</strong> is where you manage the sections you are running next year:
+            confirm section counts per course, assign teacher(s) to sections, add/adjust sections manually, and rerun auto-sectioning if needed.
+          </p>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="create-sections-step2">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Department list</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Inside a department</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Course View cards</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Add Section</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="5">Rerun auto-sectioning</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="create-sections-step2" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 2.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.1 — Department list screen</strong>
+                    <div class="muted">
+                      <p>On the Section Review landing page, you&rsquo;ll see a department list with:</p>
+                      <ul>
+                        <li><strong>Status</strong>: Complete or Incomplete</li>
+                        <li><strong>Action</strong>:
+                          <ul>
+                            <li><strong>Start</strong> (for incomplete departments)</li>
+                            <li><strong>Review</strong> (for complete departments)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p>Select the department you want to work on first.</p>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Tip</strong>. Start with the largest academic departments first (Math/Science/English) since they drive most of the section volume.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Next: Inside a department</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/section-review-department-list.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>section-review-department-list.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.2 — Inside a department</strong>
+                    <div class="muted">
+                      <p>When you open a department (e.g., Applied Technology Department), key UI elements include:</p>
+                      <ul>
+                        <li>Supervisor chip:
+                          <ul>
+                            <li>&ldquo;No Supervisor Assigned&rdquo; with <strong>Add a Supervisor</strong> (optional)</li>
+                          </ul>
+                        </li>
+                        <li><strong>View dropdown</strong>: Course View / Teacher View</li>
+                        <li><strong>Layout toggle</strong>: Grid / Row</li>
+                        <li><strong>Menu (three dots)</strong> with actions like <strong>Rerun Auto Sectioning</strong></li>
+                        <li><strong>Search</strong>: &ldquo;Search for teachers or courses&rdquo;</li>
+                        <li><strong>Print</strong> button</li>
+                      </ul>
+                      <p>Most schools work in <strong>Course View</strong> first to validate demand vs supply.</p>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Department list</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Course View cards</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/section-review-inside-department.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>section-review-inside-department.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.3 ========= -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.3 — Course View cards (demand vs supply)</strong>
+                    <div class="muted">
+                      <p>Each course card typically shows:</p>
+                      <ul>
+                        <li>Course name + code</li>
+                        <li><strong>Demand</strong>: requests (and sometimes alternates)</li>
+                        <li><strong>Supply</strong>: # of section(s)</li>
+                        <li><strong>Current Est. Class Sizes</strong> box</li>
+                      </ul>
+                      <p><strong>How to interpret</strong>:</p>
+                      <ul>
+                        <li>High requests + low sections &rarr; consider adding sections</li>
+                        <li>Estimated class sizes help you catch overload before scheduling</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Tip</strong>. Check overloads against Course Caps and room capacities configured in Edit Constraints.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Back: Inside department</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Next: Add Section</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/section-review-course-cards.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>section-review-course-cards.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.4 ========= -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.4 — Add Section (manual)</strong>
+                    <div class="muted">
+                      <ol>
+                        <li>Click <strong>Add Section</strong> under a course card.</li>
+                        <li>A <strong>To Be Added</strong> panel appears with:
+                          <ul>
+                            <li>Course (pre-filled)</li>
+                            <li>Teacher(s) fields (blank initially)</li>
+                            <li><strong>Add Another Teacher</strong> (for co-teaching)</li>
+                            <li><strong>Cancel</strong> (discard)</li>
+                            <li><strong>Save</strong> (creates the section)</li>
+                          </ul>
+                        </li>
+                        <li>Click <strong>Save</strong> to create the new section draft.</li>
+                      </ol>
+
+                      <p style="margin-top:10px;"><strong>Existing section card icons</strong> often include:</p>
+                      <ul>
+                        <li>Edit (pencil)</li>
+                        <li>Duplicate (two squares)</li>
+                        <li>Delete (trash)</li>
+                        <li><strong>Add Subsection</strong> (if supported by your model)</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Back: Course cards</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="5">Next: Auto sectioning</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/section-review-add-section.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>section-review-add-section.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.5 ========= -->
+            <div data-inner-step="5" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.5 — Rerun Auto Sectioning</strong>
+                    <div class="muted">
+                      <p>From the department menu (three dots), select <strong>Rerun Auto Sectioning</strong> to trigger recalculation of sections.</p>
+                      <p>While running, the UI may show messages like:</p>
+                      <ul>
+                        <li>&ldquo;Sections are currently being created&hellip;&rdquo;</li>
+                        <li>&ldquo;We are currently calculating and assigning sections&hellip;&rdquo;</li>
+                      </ul>
+                      <p>Use this after updating caps, demand assumptions, or course-teacher eligibility.</p>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small><strong>Good practice</strong>. After rerunning, re-check estimated class sizes to confirm overloads were resolved.</small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Back: Add Section</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Department list</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/section-review-auto-sectioning.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>section-review-auto-sectioning.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="create-sections-step2" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Create Labels</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 3 — Create Labels (Teams + Labels)
+      ========================== -->
+      <div class="step" data-step="3" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-title">
+              <strong>Create Labels</strong>
+              <span>Create teams/labels and apply them to sections</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Create teams and labels (custom group tags) and apply them to sections. This is useful for grouping rules that
+            aren&rsquo;t captured by course codes (e.g., program cohorts, bilingual groups, academy tracks).
+          </p>
+
+          <div class="media-slot" style="margin-top:14px;">
+            <div class="grid-2" style="align-items:start; gap:14px;">
+
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <div class="callout" style="margin:0;">
+                  <strong>Top panels</strong>
+                  <div class="muted">
+                    <ul>
+                      <li><strong>Teams</strong> panel with <strong>Add Team</strong></li>
+                      <li><strong>Labels</strong> panel with <strong>Add Label</strong></li>
+                      <li>Existing labels show a colored dot + label name + an X to delete the label globally</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <strong>Create a label</strong>
+                  <div class="muted">
+                    <ol>
+                      <li>Click <strong>Add Label</strong>.</li>
+                      <li>Enter the label name in the editable row.</li>
+                      <li>Click ✓ to save (or X to cancel).</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <strong>Apply teams/labels to sections</strong>
+                  <div class="muted">
+                    <ul>
+                      <li>Scroll to sections grouped by department.</li>
+                      <li>Each section card shows Course + Teacher + applied tags (dot + name + X to remove).</li>
+                      <li>Click <strong>Add Team/Label</strong> on a section card to attach tags.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <small>
+                    <strong>Note</strong>. If you see a dot with no text, it usually indicates an incomplete/unnamed tag or a tag removed globally.
+                    Remove it with X and re-add properly.
+                  </small>
+                </div>
+              </div>
+
+              <div>
+                <video
+                  controls
+                  loop
+                  autoplay
+                  muted
+                  playsinline
+                  preload="metadata"
+                  style="width:100%; max-width:520px; border-radius:14px; display:block;"
+                  src="assets/videos/create-labels.mp4">
+                  Sorry, your browser doesn&rsquo;t support embedded videos.
+                </video>
+                <div class="muted" style="margin-top:8px; font-size:12px;">
+                  Replace <code>create-labels.mp4</code> with your real filename.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Student Labels</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 4 — Student Labels (INNER WIZARD)
+        Mini steps 4.1 → 4.2
+      ========================== -->
+      <div class="step" data-step="4" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">4</div>
+            <div class="step-title">
+              <strong>Student Labels</strong>
+              <span>Assign teams/labels to students for grouping</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Assign the teams/labels you created to specific students. This starts grouping/teaming logic the scheduler can use later.
+          </p>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="create-sections-step4">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">By Team/Label</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">By Student</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="create-sections-step4" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 4.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.1 — View: By Team/Label (default)</strong>
+                    <div class="muted">
+                      <p>The page is organized into two columns:</p>
+                      <ul>
+                        <li><strong>Teams</strong> (blue header)</li>
+                        <li><strong>Labels</strong> (orange header)</li>
+                      </ul>
+
+                      <p>Each card shows:</p>
+                      <ul>
+                        <li>Team/Label context + associated course/section title</li>
+                        <li>Student count (e.g., &ldquo;0 student(s)&rdquo;)</li>
+                        <li>Placeholder: &ldquo;No students added yet&hellip;&rdquo;</li>
+                        <li><strong>Add Student</strong> action</li>
+                      </ul>
+
+                      <p><strong>Add a student</strong>:</p>
+                      <ol>
+                        <li>Click <strong>Add Student</strong>.</li>
+                        <li>Use the search field: <em>Search for a student</em>.</li>
+                        <li>Select the student; they appear in the card and the count updates.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Note</strong>. If you see a card title like <strong>null - &lt;Course Name&gt;</strong>, the label/team name may be missing upstream.
+                      Fix labels in Create Labels, then re-apply.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Switch: By Student</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/student-labels-by-team.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>student-labels-by-team.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 4.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.2 — View: By Student (audit one student)</strong>
+                    <div class="muted">
+                      <p>This view is useful when you want to audit one student&rsquo;s grouping.</p>
+                      <p><strong>How it works</strong>:</p>
+                      <ol>
+                        <li>Switch the view dropdown to <strong>By Student</strong>.</li>
+                        <li>Select a student.</li>
+                        <li>Assign teams/labels to that student as needed.</li>
+                      </ol>
+                      <p>If you share a screenshot of a populated student card, we can document exact remove/edit behaviors (how tags render per student).</p>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: By Team/Label</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/student-labels-by-student.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>student-labels-by-student.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="create-sections-step4" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ok" data-complete type="button">Finish Create Sections</button>
+            <button class="btn-solid" data-jump="place-sections" type="button">Next: Place Sections</button>
+            <button class="btn-solid ghost" data-jump="edit-constraints" type="button">Back: Edit Constraints</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /steps -->
+  </div><!-- /panel -->
+</section>

@@ -5,14 +5,14 @@ import { updateAllProgressUI } from "./progress.js";
 
 /* =========================
    Inner (mini) wizards
-   ========================= */
-/* =========================
-   Inner (mini) wizards
-   ========================= */
-// ✅ Replace ONLY initInnerWizards() in your steps.js with this version.
-// It does two things:
-// 1) Fixes Next/Prev for ALL mini-steps (delegated click)
-// 2) Forces the video in the newly shown mini-step to play (autoplay won't reliably re-trigger on hidden→shown)
+   =========================
+   ✅ Minimal changes:
+   - Adds support for TOP jump buttons:
+       [data-inner-jumps="schedule-structure-step2"]
+       buttons with [data-inner-jump="1|2|3|4..."]
+   - Keeps your existing Prev/Next delegation
+   - Highlights active jump button with .active
+*/
 
 export function initInnerWizards(rootEl = document) {
   if (!rootEl) return;
@@ -20,12 +20,32 @@ export function initInnerWizards(rootEl = document) {
   const wizards = Array.from(rootEl.querySelectorAll("[data-inner-steps]"));
 
   wizards.forEach((wiz) => {
-    const stepEls = Array.from(wiz.querySelectorAll("[data-inner-step]"));
+    // Only direct children are steps
+    const stepEls = Array.from(wiz.querySelectorAll(":scope > [data-inner-step]"));
     if (!stepEls.length) return;
 
     // prevent double-binding if hydrateSection is called repeatedly
     if (wiz.dataset.bound === "1") return;
     wiz.dataset.bound = "1";
+
+    const wizardId = wiz.getAttribute("data-inner-steps") || "";
+
+    // Jump bar can live outside wiz but inside the section
+    const jumpBar = wizardId
+      ? rootEl.querySelector(`[data-inner-jumps="${CSS.escape(wizardId)}"]`)
+      : null;
+
+    const jumpBtns = jumpBar
+      ? Array.from(jumpBar.querySelectorAll("[data-inner-jump]"))
+      : [];
+
+    // ✅ Shared nav can live outside wiz too
+    const navWrap = wizardId
+      ? rootEl.querySelector(`[data-inner-nav="${CSS.escape(wizardId)}"]`)
+      : null;
+
+    const navPrev = navWrap ? navWrap.querySelector("[data-inner-prev]") : null;
+    const navNext = navWrap ? navWrap.querySelector("[data-inner-next]") : null;
 
     // Find initial visible step; default to 0
     let idx = stepEls.findIndex((s) => !s.hasAttribute("hidden"));
@@ -39,38 +59,74 @@ export function initInnerWizards(rootEl = document) {
       const cur = stepEls[idx];
       if (!cur) return;
 
-      const prevBtn = cur.querySelector("[data-inner-prev]");
-      const nextBtn = cur.querySelector("[data-inner-next]");
+      // Buttons inside the current inner-step (old pattern)
+      const prevInStep = cur.querySelector("[data-inner-prev]");
+      const nextInStep = cur.querySelector("[data-inner-next]");
 
-      // IMPORTANT: JS is the source of truth (ignore hard-coded disabled)
-      if (prevBtn) prevBtn.disabled = (idx === 0);
-      if (nextBtn) nextBtn.disabled = (idx === stepEls.length - 1);
+      const atStart = (idx === 0);
+      const atEnd = (idx === stepEls.length - 1);
+
+      // ✅ Shared buttons (new pattern)
+      if (navPrev) navPrev.disabled = atStart;
+      if (navNext) navNext.disabled = atEnd;
+
+      // ✅ Old pattern still works too
+      if (prevInStep) prevInStep.disabled = atStart;
+      if (nextInStep) nextInStep.disabled = atEnd;
     }
 
+    function syncJumpActive() {
+  if (!jumpBtns.length) return;
+
+  const cur = stepEls[idx];
+  const curStepNum =
+    parseInt(cur?.getAttribute("data-inner-step") || "", 10) || (idx + 1);
+
+  // Find the "section" jump: greatest jump <= current step
+  let activeJump = null;
+
+  jumpBtns.forEach((btn) => {
+    const n = parseInt(btn.getAttribute("data-inner-jump") || "", 10);
+    if (!Number.isFinite(n)) return;
+    if (n <= curStepNum && (activeJump === null || n > activeJump)) {
+      activeJump = n;
+    }
+  });
+
+  // Fallback: if current step is before first jump (rare), pick first
+  if (activeJump === null) {
+    const first = jumpBtns
+      .map((b) => parseInt(b.getAttribute("data-inner-jump") || "", 10))
+      .filter(Number.isFinite)
+      .sort((a, b) => a - b)[0];
+    activeJump = first ?? null;
+  }
+
+  jumpBtns.forEach((btn) => {
+    const n = parseInt(btn.getAttribute("data-inner-jump") || "", 10);
+    const isActive = (activeJump !== null && n === activeJump);
+    btn.classList.toggle("active", isActive);
+    btn.setAttribute("aria-current", isActive ? "true" : "false");
+  });
+}
+
+
     function playActiveVideo() {
-      // Pause videos in all steps
+      // Pause all videos first
       stepEls.forEach((s) => {
         s.querySelectorAll("video").forEach((v) => {
           try { v.pause(); } catch (_) {}
         });
       });
 
-      // Play the active step’s first video (if present)
+      // Play active step’s first video
       const active = stepEls[idx];
       const v = active ? active.querySelector("video") : null;
       if (!v) return;
 
       try {
-        // Optional: restart when step changes
-        // v.currentTime = 0;
-
-        // Only reload if it has a source (helps with hidden->shown)
-        // Avoid excessive reloads if you don’t need it:
-        v.load();
-
-        v.play().catch(() => {
-          // Autoplay policies may block; user can press play
-        });
+        v.load(); // helps when hidden -> shown
+        v.play().catch(() => {});
       } catch (_) {}
     }
 
@@ -83,10 +139,33 @@ export function initInnerWizards(rootEl = document) {
       });
 
       syncNavDisabled();
+      syncJumpActive();
       playActiveVideo();
     }
 
-    // Generic click handling for ANY number of steps
+    // ✅ Jump buttons (bind once)
+    if (jumpBar && jumpBar.dataset.bound !== "1") {
+      jumpBar.dataset.bound = "1";
+
+      jumpBar.addEventListener("click", (e) => {
+        const btn = e.target.closest("[data-inner-jump]");
+        if (!btn) return;
+
+        e.preventDefault();
+
+        const targetStepNum = parseInt(btn.getAttribute("data-inner-jump") || "", 10);
+        if (!targetStepNum) return;
+
+        const targetIdx = stepEls.findIndex((s) => {
+          const n = parseInt(s.getAttribute("data-inner-step") || "", 10);
+          return n === targetStepNum;
+        });
+
+        if (targetIdx >= 0) show(targetIdx);
+      });
+    }
+
+    // ✅ Prev/Next INSIDE the wizard container (old pattern)
     wiz.addEventListener("click", (e) => {
       const prevBtn = e.target.closest("[data-inner-prev]");
       const nextBtn = e.target.closest("[data-inner-next]");
@@ -94,16 +173,30 @@ export function initInnerWizards(rootEl = document) {
 
       e.preventDefault();
 
-      // Don’t rely on HTML disabled; rely on idx bounds
       if (prevBtn) show(idx - 1);
       if (nextBtn) show(idx + 1);
     });
+
+    // ✅ Prev/Next OUTSIDE the wizard container (your new shared buttons)
+    if (navWrap && navWrap.dataset.bound !== "1") {
+      navWrap.dataset.bound = "1";
+
+      navWrap.addEventListener("click", (e) => {
+        const prevBtn = e.target.closest("[data-inner-prev]");
+        const nextBtn = e.target.closest("[data-inner-next]");
+        if (!prevBtn && !nextBtn) return;
+
+        e.preventDefault();
+
+        if (prevBtn) show(idx - 1);
+        if (nextBtn) show(idx + 1);
+      });
+    }
 
     // Initialize
     show(idx);
   });
 }
-
 
 
 /* =========================
@@ -232,6 +325,7 @@ export function unlockNextAndOpen(sectionId, currentStepNum) {
     next.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
+
 // SIS branching: show only the selected SIS flow blocks (genesis vs generic)
 /* =========================================================
    Uploading Data — SIS branching (Genesis vs Generic)

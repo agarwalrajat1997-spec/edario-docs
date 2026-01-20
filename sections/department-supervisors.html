@@ -1,63 +1,502 @@
 ﻿<section class="doc-section" id="department-supervisors" data-title="Departments & Roles" data-path="Setting up the Wizard / Departments & Roles">
-          <div class="panel">
-            <div class="panel-header">
-              <div class="meta">
-                <strong>Departments & Roles (Wizard Step 4)</strong>
-                <span>Assign department supervisors (optional) to distribute scheduling ownership</span>
-              </div>
-              <div class="progress-pill">
-                <div class="bar"><i data-progressbar="department-supervisors"></i></div>
-                <div class="pct" data-progress="department-supervisors">0%</div>
-              </div>
-            </div>
+  <div class="panel">
+    <div class="panel-header">
+      <div class="meta">
+        <strong>Departments &amp; Roles (Wizard Step 4)</strong>
+        <span>Assign department supervisors (optional) to distribute scheduling ownership</span>
+      </div>
+      <div class="progress-pill">
+        <div class="bar"><i data-progressbar="department-supervisors"></i></div>
+        <div class="pct" data-progress="department-supervisors">0%</div>
+      </div>
+    </div>
 
-            <div class="steps content" data-steps="department-supervisors">
-              <div class="step" data-step="1">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">1</div>
-                    <div class="step-title">
-                      <strong>Review departments</strong>
-                      <span>Add / edit / remove as needed</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>
-                    Clean department naming keeps scheduling organized and enables safe delegation.
-                  </p>
-                  <div class="btn-row">
-                    
-                  </div>
-                </div>
-              </div>
+    <div class="steps content" data-steps="department-supervisors">
 
-              <div class="step" data-step="2" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">2</div>
-                    <div class="step-title">
-                      <strong>Assign department supervisors (optional)</strong>
-                      <span>Share scheduling responsibility safely</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Assign supervisors if department heads will validate offerings and eligibility.</p>
-                  <div class="btn-row">
-                    <button class="btn-solid ok" data-complete>Finish Departments & Roles</button>
-                    <button class="btn-solid ghost" data-jump="data-cleaning">Next: Data Cleaning</button>
-                  </div>
-                </div>
-              </div>
+      <!-- =========================
+        STEP 1 — Review departments (INNER WIZARD)
+        Mini steps 1.1 → 1.4
+      ========================== -->
+      <div class="step open" data-step="1" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-title">
+              <strong>Review departments</strong>
+              <span>Add / edit / remove as needed</span>
             </div>
           </div>
-        </section>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Clean department naming keeps scheduling organized and enables safe delegation.
+            In this step, you’ll create the departments your school needs, rename anything inconsistent, and remove
+            departments you don’t want to use.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Where to find it</strong>. Scheduling Wizard → Step 4: <strong>Manage Departments</strong>.
+              Make sure you’re working in the correct school year (year dropdown at top-left, e.g., <strong>2026–2027</strong>).
+            </small>
+          </div>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="department-supervisors-step1">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">What you’ll see</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Add department</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Rename / edit</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Remove</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="department-supervisors-step1" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 1.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>1.1 — Page layout (what you’ll see)</strong>
+                    <div class="muted">
+                      <p>You’ll see a <strong>Departments list</strong>. Each department appears as a card with:</p>
+                      <ul>
+                        <li><strong>Department name</strong> (e.g., Mathematics, Science, Fine Arts)</li>
+                        <li><strong>Edit icon</strong> (pencil) next to the name (rename/edit)</li>
+                        <li><strong>Delete icon</strong> (×) on the top-right of the card (remove)</li>
+                        <li>A <strong>Supervisor chip</strong> showing either a person or <em>No Department Supervisor</em></li>
+                        <li>A link: <strong>Assign a Department Supervisor</strong> (optional delegation)</li>
+                      </ul>
+
+                      <p style="margin-top:10px;">
+                        <strong>Primary actions</strong> on the page:
+                      </p>
+                      <ul>
+                        <li><strong>Add New Department</strong> (creates a new department card)</li>
+                        <li><strong>Continue to Data Cleaning</strong> (bottom-right) to move forward</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Tip</strong>. Use department names that match what your school already uses in course catalogs/reporting.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Next: Add department</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Skip to: Rename</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/manage-departments-layout.mp4">
+                      Sorry, your browser doesn’t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manage-departments-layout.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 1.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>1.2 — Add a new department</strong>
+                    <div class="muted">
+                      <ol>
+                        <li>Click <strong>Add New Department</strong>.</li>
+                        <li>Enter the department name (e.g., Mathematics, Science, Fine Arts).</li>
+                        <li>Save/confirm — the new department appears as a new card.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Tip</strong>. Start with the set of departments your school uses for reporting.
+                      You can always add more later.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Rename / edit</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Skip to: Remove</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/manage-departments-add-department.mp4">
+                      Sorry, your browser doesn’t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manage-departments-add-department.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 1.3 ========= -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>1.3 — Rename / edit a department</strong>
+                    <div class="muted">
+                      <ol>
+                        <li>On the department card, click the <strong>pencil (edit)</strong> icon next to the name.</li>
+                        <li>Update the name.</li>
+                        <li>Save/confirm.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Good practice</strong>. Keep naming consistent and avoid duplicates (e.g., “Math” vs “Mathematics”).
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Back: Add department</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Next: Remove</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/manage-departments-rename-department.mp4">
+                      Sorry, your browser doesn’t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manage-departments-rename-department.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 1.4 ========= -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>1.4 — Remove a department</strong>
+                    <div class="muted">
+                      <ol>
+                        <li>Click the <strong>× (delete)</strong> icon on the department card.</li>
+                        <li>Confirm deletion (if prompted).</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Good practice</strong>. Only delete departments you’re sure you don’t need —
+                      especially if your school data or workflows reference them.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Back: Rename</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: What you’ll see</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/manage-departments-delete-department.mp4">
+                      Sorry, your browser doesn’t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manage-departments-delete-department.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT (STAYS VISIBLE) -->
+          <div class="btn-row inner-nav" data-inner-nav="department-supervisors-step1" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Assign supervisors</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 2 — Assign department supervisors (optional) (INNER WIZARD)
+        Mini steps 2.1 → 2.3
+      ========================== -->
+      <div class="step" data-step="2" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-title">
+              <strong>Assign department supervisors (optional)</strong>
+              <span>Share scheduling responsibility safely</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Assign supervisors if department heads will validate offerings and eligibility — or if you want departments to
+            “own” their course planning. If you leave a supervisor blank, Admins retain full scheduling control.
+          </p>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="department-supervisors-step2">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Assign supervisor</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Add new supervisor</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Recommended workflow</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="department-supervisors-step2" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 2.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.1 — Assign a Department Supervisor (optional)</strong>
+                    <div class="muted">
+                      <ol>
+                        <li>On a department card, click <strong>Assign a Department Supervisor</strong>.</li>
+                        <li>Choose a supervisor from the dropdown (examples: Admin, Edario; Agarwal, Rajat).</li>
+                        <li>The selection appears on the card as the <strong>Supervisor</strong> chip.</li>
+                        <li>If you don’t want delegation, leave it as <em>No Department Supervisor</em>.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Reminder</strong>. Leaving a supervisor blank means the Admin team keeps full control of scheduling for that department.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">If missing: Add new supervisor</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Recommended workflow</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/manage-departments-assign-supervisor.mp4">
+                      Sorry, your browser doesn’t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manage-departments-assign-supervisor.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.2 — “Add new Supervisor” (create supervisor account first)</strong>
+                    <div class="muted">
+                      <p>
+                        If the department dropdown shows <strong>Add new Supervisor</strong>, you’ll need to create the user account first.
+                      </p>
+                      <ol>
+                        <li>Go to <strong>Settings → Users</strong>.</li>
+                        <li>Find the <strong>Department Supervisors</strong> section.</li>
+                        <li>Click <strong>Add New User</strong>.</li>
+                        <li>Create the supervisor account (name/email + required fields).</li>
+                        <li>Return to this step and assign the supervisor from the dropdown.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Note</strong>. Settings → Users is organized by role: Admins, Department Supervisors, Counselors.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Assign supervisor</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Recommended workflow</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/settings-users-add-supervisor.mp4">
+                      Sorry, your browser doesn’t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>settings-users-add-supervisor.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 2.3 ========= -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.3 — Recommended workflow</strong>
+                    <div class="muted">
+                      <ol>
+                        <li>Create all departments your school needs.</li>
+                        <li>Create supervisor accounts (if delegating) in <strong>Settings → Users</strong>.</li>
+                        <li>Assign supervisors to the relevant departments.</li>
+                        <li>Click <strong>Continue to Data Cleaning</strong> to proceed.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Optional</strong>. School profile fields are in <strong>Settings → Account</strong>
+                      (School Name, School Code). Click <strong>Save Changes</strong> to apply.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Assign</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Back: Add supervisor</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video
+                      class="step-video"
+                      controls
+                      loop
+                      autoplay
+                      muted
+                      playsinline
+                      preload="metadata"
+                      src="assets/videos/manage-departments-return-assign.mp4">
+                      Sorry, your browser doesn’t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manage-departments-return-assign.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="department-supervisors-step2" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <!-- Finish / Next actions (kept from your template intent) -->
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ok" data-complete type="button">Finish Departments &amp; Roles</button>
+            <button class="btn-solid ghost" data-jump="data-cleaning" type="button">Next: Data Cleaning</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /steps -->
+  </div><!-- /panel -->
+</section>

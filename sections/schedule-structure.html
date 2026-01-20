@@ -94,7 +94,7 @@
         </div>
       </div>
 
-  <!-- STEP 2 (Mini steps 2.1 → 2.5) — videos fixed (new filename) -->
+<!-- STEP 2 (Mini steps 2.1 → 2.4) + Jump buttons -->
 <div class="step" data-step="2" data-locked="false" data-inner-wizard="true">
   <div class="step-head">
     <div class="step-left">
@@ -116,222 +116,208 @@
       and rotating period blocks on the right.
     </p>
 
+    <!-- TOP JUMP BUTTONS (NEW) -->
+    <div class="inner-jumpbar-wrap">
+      <div class="inner-jumpbar" data-inner-jumps="schedule-structure-step2">
+        <button type="button" class="inner-jumpbtn" data-inner-jump="1">Add Days</button>
+        <button type="button" class="inner-jumpbtn" data-inner-jump="2">Add Periods</button>
+        <button type="button" class="inner-jumpbtn" data-inner-jump="3">Add Rotating</button>
+        <button type="button" class="inner-jumpbtn" data-inner-jump="4">Add Lunches</button>
+      </div>
+    </div>
+
+    <!-- INNER WIZARD -->
     <div class="media-slot" data-inner-steps="schedule-structure-step2" style="margin-top:14px;">
 
-      <!-- Helper: reuse this exact URL everywhere -->
-      <!-- assets/videos/schedule-structure-add-a-day.mp4 -->
+      <!-- ========= INNER STEP 2.1 ========= -->
+      <div data-inner-step="1">
+        <div class="inner-grid-2">
 
-  <!-- ========= INNER STEP 2.1 ========= -->
-<div data-inner-step="1">
-  <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
+          <div class="inner-left">
+            <div class="callout" style="margin:0;">
+              <strong>2.1 — Add cycle days (Day tabs)</strong>
+              <div class="muted">
+                <ol>
+                  <li>A “day cycle” is how many unique days your schedule uses before it repeats back to Day 1.</li>
+                  <li>Look at the tabs along the top (Day 1, Day 2, etc.). These tabs represent the days in your cycle.</li>
+                  <li>Click “+ Add Day” to create the next day tab. Each click adds exactly one more day (Day 3, Day 4, and so on).</li>
+                  <li>Keep adding days until the tabs match what your school actually runs. Example: a 5-day cycle should end at Day 5. A 6-day cycle should end at Day 6.</li>
+                  <li>When your day tabs are correct, click into each Day tab and build that day’s periods (next step). Some schools keep the same period times on every day, but others change times, lunches, or rotation mappings depending on the day.</li>
+                </ol>
+              </div>
+            </div>
 
-    <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
-      <div class="callout" style="margin:0;">
-        <strong>2.1 — Add cycle days (Day tabs)</strong>
-        <small><span class="muted">
-          <p>1.) A “day cycle” is how many unique days your schedule uses before it repeats back to Day 1.</p>
-          <p>2.) Look at the tabs along the top (Day 1, Day 2, etc.). These tabs represent the days in your cycle.</p>
-          <p>3.) Click “+ Add Day” to create the next day tab. Each click adds exactly one more day (Day 3, Day 4, and so on).</p>
-          <p>4.) Keep adding days until the tabs match what your school actually runs. Example: a 5-day cycle should end at Day 5. A 6-day cycle should end at Day 6.</p>
-          <p>5.) When your day tabs are correct, click into each Day tab and build that day’s periods (next step). Some schools keep the same period times on every day, but others change times, lunches, or rotation mappings depending on the day.</p>
+            <div class="callout" style="margin:0;">
+              <small><strong>Pro Tip</strong>. If you’re not sure, start with a 5-day cycle and confirm with the school. Adding Day 6 later is easy and won’t undo your existing setup.</small>
+            </div>
+          </div>
 
-        </span></small>
+          <div class="inner-right">
+            <div class="inner-video-shell">
+              <video
+                class="step-video"
+                controls
+                loop
+                autoplay
+                muted
+                playsinline
+                preload="metadata"
+                src="assets/videos/schedule-structure-add-a-day.mp4">
+                Sorry, your browser doesn’t support embedded videos.
+              </video>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="callout" style="margin:0;">
-        <small><strong>Pro Tip</strong>. If you’re not sure, start with a 5-day cycle and confirm with the school. Adding Day 6 later is easy and won’t undo your existing setup.</small>
+      <!-- ========= INNER STEP 2.2 ========= -->
+      <div data-inner-step="2" hidden>
+        <div class="inner-grid-2">
+
+          <div class="inner-left">
+            <div class="callout" style="margin:0;">
+              <strong>2.2 — Add and manage periods (time slots)</strong>
+              <div class="muted">
+                <ol>
+                  <li>Period rows are the building blocks of a day. Each row represents one real time slot in the bell schedule (e.g., “8:30–9:20”).</li>
+                  <li>Select the correct Day tab first (Day 1, Day 2, etc.). Periods are created per day.</li>
+                  <li>Click “+ Add a Period” to create a new period row. Keep going until the number of rows matches that day.</li>
+                  <li>To reorder, drag the grab handle (dotted icon) on the left side of a period row.</li>
+                  <li>Click into the time fields and enter the start/end times for that row.</li>
+                  <li>“Include in Match?” controls whether a period can hold scheduled classes. Off = non-instructional time.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="callout" style="margin:0;">
+              <small><strong>Pro Tip</strong>. Get the structure right first — details are easier once the day layout is correct.</small>
+            </div>
+          </div>
+
+          <div class="inner-right">
+            <div class="inner-video-shell">
+              <video
+                class="step-video"
+                controls
+                loop
+                autoplay
+                muted
+                playsinline
+                preload="metadata"
+                src="assets/videos/schedule-structure-add-periods.mp4">
+                Sorry, your browser doesn’t support embedded videos.
+              </video>
+            </div>
+            <div class="muted" style="margin-top:8px; font-size:12px;">
+              Replace <code>schedule-structure-add-periods.mp4</code> with your real filename.
+            </div>
+          </div>
+
+        </div>
       </div>
+
+      <!-- ========= INNER STEP 2.3 ========= -->
+      <div data-inner-step="3" hidden>
+        <div class="inner-grid-2">
+
+          <div class="inner-left">
+            <div class="callout" style="margin:0;">
+              <strong>2.3 — Add and map rotating periods (rotation labels)</strong>
+              <div class="muted">
+                <ol>
+                  <li>Rotating periods are labels. They do not create new time slots — your period rows are the real schedule.</li>
+                  <li>Add the labels you need using “+ Add a Rotating Period” (e.g., 1–8 or 1–9).</li>
+                  <li>For each Day tab, drag a rotating tile into the “Drop a rotating period here” box in each instructional period row.</li>
+                  <li>Repeat for all days in the cycle. Day 2 can look different from Day 1 in rotating schedules.</li>
+                  <li>Quick check: each instructional period row should have a rotating tile (unless intentionally blank).</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="callout" style="margin:0;">
+              <small><strong>Pro Tip</strong>. Finish one day completely, then move to the next. Scan for any empty mapping boxes.</small>
+            </div>
+          </div>
+
+          <div class="inner-right">
+            <div class="inner-video-shell">
+              <video
+                class="step-video"
+                controls
+                loop
+                autoplay
+                muted
+                playsinline
+                preload="metadata"
+                src="assets/videos/schedule-structure-rotating-periods.mp4">
+                Sorry, your browser doesn’t support embedded videos.
+              </video>
+            </div>
+            <div class="muted" style="margin-top:8px; font-size:12px;">
+              Replace <code>schedule-structure-rotating-periods.mp4</code> with your real filename.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========= INNER STEP 2.4 ========= -->
+      <div data-inner-step="4" hidden>
+        <div class="inner-grid-2">
+
+          <div class="inner-left">
+            <div class="callout" style="margin:0;">
+              <strong>2.4 — Add lunches (optional)</strong>
+              <div class="muted">
+                <ol>
+                  <li>Lunches are optional. Add them only if your school has one lunch time or multiple lunch waves.</li>
+                  <li>Click “+ Add a Lunch” to create a lunch card (Lunch 1, Lunch 2, Lunch 3).</li>
+                  <li>Rename the lunch card (edit/pen icon) to match the school naming.</li>
+                  <li>Enter lunch start and end times in the time boxes.</li>
+                  <li>Edario will reflect lunch tags on the corresponding period cards once times are set.</li>
+                  <li>Final check: names are clear, times are valid, and the lunch tag appears where expected.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="callout" style="margin:0;">
+              <small><strong>Pro Tip</strong>. Keep lunch names short and consistent. Ensure lunch times fit inside the intended lunch window.</small>
+            </div>
+          </div>
+
+          <div class="inner-right">
+            <div class="inner-video-shell">
+              <video
+                class="step-video"
+                controls
+                loop
+                autoplay
+                muted
+                playsinline
+                preload="metadata"
+                src="assets/videos/schedule-structure-add-lunch.mp4">
+                Sorry, your browser doesn’t support embedded videos.
+              </video>
+            </div>
+            <div class="muted" style="margin-top:8px; font-size:12px;">
+              Replace <code>schedule-structure-add-lunch.mp4</code> with your real filename.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
-    <div style="width:100%; max-width:520px;">
-      <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
-        <video
-          class="step-video"
-          controls
-          loop
-          autoplay
-          muted
-          playsinline
-          preload="metadata"
-          style="width:100%; height:100%; display:block;"
-          src="assets/videos/schedule strcture/add-day.mp4">
-          Sorry, your browser doesn’t support embedded videos.
-        </video>
-      </div>
+    <!-- SHARED PREV / NEXT (STAYS VISIBLE) -->
+    <div class="btn-row inner-nav" data-inner-nav="schedule-structure-step2" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+      <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+      <button class="btn-solid" type="button" data-inner-next>Next</button>
     </div>
 
-  </div>
-
-  <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
-    <button class="btn-solid ghost" type="button" data-inner-prev disabled>Previous</button>
-    <button class="btn-solid" type="button" data-inner-next>Next</button>
   </div>
 </div>
-
-
-
-
-   <!-- ========= INNER STEP 2.2 ========= -->
-<div data-inner-step="2" hidden>
-  <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
-
-    <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
-      <div class="callout" style="margin:0;">
-        <strong>2.2 — Add and manage periods (time slots)</strong>
-        <small><span class="muted">
-          <p>1.) Period rows are the building blocks of a day. Each row represents one real time slot in the bell schedule (for example, “8:30–9:20”).</p>
-
-          <p>2.) Start by selecting the correct Day tab at the top (Day 1, Day 2, etc.). Periods are created per day, so always check you are editing the right day.</p>
-
-          <p>3.) Click “+ Add a Period” to create a new period row. Keep clicking until the number of rows matches the number of time slots your school runs that day.</p>
-
-          <p>4.) To reorder periods, click and hold the grab handle (dotted drag icon) on the left side of a period row. Drag the periods up or down to match the day’s flow.</p>
-
-          <p>5.) To set period times, click directly into the time fields (the boxes that show something like “00:00”). Type the start and end time for that row. This defines the time window for that slot on that day.</p>
-
-          <p>6.) “Include in Match?” controls whether a period can hold scheduled classes. If it is on, the scheduler is allowed to place course sections in that time slot. If it is off, treat it as non-instructional time (advisory, homeroom, assembly, etc.).</p>
-
-        </span></small>
-      </div>
-
-      <div class="callout" style="margin:0;">
-        <small><strong>Pro Tip</strong>End note: get the structure right first — details are easier once the day layout is correct.</small>
-      </div>
-    </div>
-
-    <div style="width:100%; max-width:520px;">
-      <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
-        <video
-          class="step-video"
-          controls
-          loop
-          autoplay
-          muted
-          playsinline
-          preload="metadata"
-          style="width:100%; height:100%; display:block;"
-          src="assets/videos/day.mp4">
-          Sorry, your browser doesn’t support embedded videos.
-        </video>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
-    <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
-    <button class="btn-solid" type="button" data-inner-next>Next</button>
-  </div>
-</div>
-
-
-    <!-- ========= INNER STEP 2.3 ========= -->
-<div data-inner-step="3" hidden>
-  <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
-
-    <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
-      <div class="callout" style="margin:0;">
-        <strong>2.3 — Add and map rotating periods (rotation labels)</strong>
-        <small><span class="muted">
-          <p>1.) Rotating periods are just labels. They help you describe a rotating schedule where what happens in a time slot changes across the day cycle. They do not create new time slots — your period rows (with start/end times) are still the real schedule.</p>
-
-          <p>2.) Add the labels you need using “+ Add a Rotating Period” (for example, 1–8 or 1–9). It’s easiest to create all labels first before you start mapping.</p>
-
-          <p>3.) For each Day tab, drag a colored rotating tile and drop it into the “Drop a rotating period here” box inside each instructional period row. This tells the system which rotation label belongs to that time slot on that day.</p>
-
-          <p>4.) Repeat for Day 2, Day 3, and the rest of your cycle. In rotating schedules, it’s normal for Day 2 to look different from Day 1 because the labels shift.</p>
-
-          <p>5.) Use the colors as a quick check: empty drop boxes usually mean you missed a mapping, and repeated colors on the same day can indicate an accidental duplicate (unless the school intends it).</p>
-        </span></small>
-      </div>
-
-      <div class="callout" style="margin:0;">
-        <small><strong>Pro Tip</strong>. Finish one day completely, then move to the next. After each day, do a fast scan: every instructional period row should have a rotating tile.</small>
-      </div>
-    </div>
-
-    <div style="width:100%; max-width:520px;">
-      <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
-        <video
-          class="step-video"
-          controls
-          loop
-          autoplay
-          muted
-          playsinline
-          preload="metadata"
-          style="width:100%; height:100%; display:block;"
-          src="assets/videos/schedule-structure-add-a-day.mp4">
-          Sorry, your browser doesn’t support embedded videos.
-        </video>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
-    <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
-    <button class="btn-solid" type="button" data-inner-next>Next</button>
-  </div>
-</div>
-
-
-<!-- ========= INNER STEP 2.4 ========= -->
-<div data-inner-step="4" hidden>
-  <div style="display:grid; grid-template-columns:minmax(0,1fr) 520px; gap:14px; align-items:start;">
-
-    <div style="display:flex; flex-direction:column; gap:12px; min-width:0;">
-      <div class="callout" style="margin:0;">
-        <strong>2.4 — Add lunches (optional)</strong>
-        <small><span class="muted">
-          <p>1.) Lunches are optional. Only add them if your school has one lunch time or multiple lunch waves that need to be tracked.</p>
-
-          <p>2.) Click “+ Add a Lunch” to create a lunch card in the Lunches column. Add one lunch card per lunch wave (for example, Lunch 1, Lunch 2, Lunch 3).</p>
-
-          <p>3.) Rename the lunch card using the edit (pen) icon so it matches what your school uses (for example, “Lunch A”, “Grade 9 Lunch”, “Upper School Lunch”).</p>
-
-          <p>4.) Set lunch times by clicking the time boxes and typing the correct start and end time. This defines the lunch window for that lunch wave.</p>
-
-          <p>5.) When lunch times are entered correctly, Edario automatically reflects the lunch against the corresponding period row (you’ll see the lunch appear on the period card as a visual tag). If you update the lunch time later, the period tag updates automatically.</p>
-
-          <p>6.) Quick check before finishing: each lunch card has a clear name and valid times, and the lunch tag shows up where you expect it during the day.</p>
-        </span></small>
-      </div>
-
-      <div class="callout" style="margin:0;">
-        <small><strong>Pro Tip</strong>. If your school runs multiple lunch waves, keep lunch names short and consistent, and make sure lunch times fit inside the intended lunch window so they appear on the correct period.</small>
-      </div>
-    </div>
-
-    <div style="width:100%; max-width:520px;">
-      <div style="width:100%; aspect-ratio:16/9; background:#0b1220; border-radius:14px; overflow:hidden;">
-        <video
-          class="step-video"
-          controls
-          loop
-          autoplay
-          muted
-          playsinline
-          preload="metadata"
-          style="width:100%; height:100%; display:block;"
-          src="assets/videos/schedule strcture/add-lunch.mp4">
-          Sorry, your browser doesn’t support embedded videos.
-        </video>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
-    <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
-    <button class="btn-solid" type="button" data-inner-next>Next</button>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
-
 
 <!-- =========================
   STEP 3

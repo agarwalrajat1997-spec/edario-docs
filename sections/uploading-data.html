@@ -918,14 +918,36 @@
 </div>
 
 
-            </div>
-          </div>
+           
+  
 
 
-      <!-- =========================
-        SIS FLOW: GENERIC (NON-GENESIS)
-      ========================== -->
+   <!-- =========================
+     SIS FLOW: GENERIC (NON-GENESIS)
+     WITH TOP JUMP BUTTONS
+     - Wizard ID: how-to-upload-generic
+     - Jump buttons point to key milestones:
+       1) SIS Support (3.1)
+       2) Course Data (3.2–3.3)
+       3) Sections (3.4–3.5)
+       4) Students (3.6–3.7)
+       5) Requests (3.8–3.9)
+       6) Validate (3.10)
+========================== -->
 <div data-sis-flow="generic" hidden>
+
+  <!-- TOP JUMP BUTTONS (NEW) -->
+  <div class="inner-jumpbar-wrap">
+    <div class="inner-jumpbar" data-inner-jumps="how-to-upload-generic">
+      <button type="button" class="inner-jumpbtn" data-inner-jump="1">SIS Support</button>
+      <button type="button" class="inner-jumpbtn" data-inner-jump="2">Course Data</button>
+      <button type="button" class="inner-jumpbtn" data-inner-jump="4">Sections</button>
+      <button type="button" class="inner-jumpbtn" data-inner-jump="6">Students</button>
+      <button type="button" class="inner-jumpbtn" data-inner-jump="8">Requests</button>
+      <button type="button" class="inner-jumpbtn" data-inner-jump="10">Validate</button>
+    </div>
+  </div>
+
   <div class="media-slot" data-inner-steps="how-to-upload-generic" style="margin-top:14px;">
 
     <!-- ========= GENERIC 3.1 ========= -->
@@ -935,10 +957,12 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.1 — Contact SIS support</strong>
-            <small><span class="muted">
-              <p>Reach out to your <span data-sis-name>SIS</span> rep/support and request exports for Edario.</p>
-              <p>Ask for the exports as CSV/Excel. The order of columns is not important.</p>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Reach out to your <span data-sis-name>SIS</span> rep/support and request exports for Edario.</p>
+                <p>Ask for the exports as CSV/Excel. The order of columns is not important.</p>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -976,7 +1000,7 @@
         </div>
       </div>
 
-       <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
+      <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px;">
         <button class="btn-solid ghost" type="button" data-inner-prev disabled>Previous</button>
         <button class="btn-solid" type="button" data-inner-next>Next</button>
       </div>
@@ -989,18 +1013,20 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.2 — Request Course Data export</strong>
-            <small><span class="muted">
-              <p>Ask for a CSV/Excel file containing all course definitions.</p>
-              <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
-              <ul>
-                <li>Course Code</li>
-                <li>Course Name</li>
-                <li>Credits</li>
-                <li>Department</li>
-                <li>Elective/Non-elective</li>
-                <li>Course Length (Full Year, Semester, Quarter)</li>
-              </ul>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Ask for a CSV/Excel file containing all course definitions.</p>
+                <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
+                <ul>
+                  <li>Course Code</li>
+                  <li>Course Name</li>
+                  <li>Credits</li>
+                  <li>Department</li>
+                  <li>Elective/Non-elective</li>
+                  <li>Course Length (Full Year, Semester, Quarter)</li>
+                </ul>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1033,10 +1059,12 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.3 — Upload Course Data into Edario</strong>
-            <small><span class="muted">
-              <p>Once you&rsquo;ve confirmed the export includes the required columns, upload it into Edario.</p>
-              <p>Drag-and-drop the file, or click the upload icon and select your saved CSV/Excel.</p>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Once you&rsquo;ve confirmed the export includes the required columns, upload it into Edario.</p>
+                <p>Drag-and-drop the file, or click the upload icon and select your saved CSV/Excel.</p>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1069,19 +1097,21 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.4 — Request Last Year&rsquo;s Sections export</strong>
-            <small><span class="muted">
-              <p>Ask for a CSV/Excel file containing the sections from the previous year.</p>
-              <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
-              <ul>
-                <li>Semester</li>
-                <li>Course</li>
-                <li>Course Name</li>
-                <li>Room(s)</li>
-                <li>Teacher(s)</li>
-                <li>Credits</li>
-                <li>Beginning Seats</li>
-              </ul>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Ask for a CSV/Excel file containing the sections from the previous year.</p>
+                <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
+                <ul>
+                  <li>Semester</li>
+                  <li>Course</li>
+                  <li>Course Name</li>
+                  <li>Room(s)</li>
+                  <li>Teacher(s)</li>
+                  <li>Credits</li>
+                  <li>Beginning Seats</li>
+                </ul>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1114,10 +1144,12 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.5 — Upload Last Year&rsquo;s Sections into Edario</strong>
-            <small><span class="muted">
-              <p>Upload the sections export into Edario using drag-and-drop or the upload icon.</p>
-              <p>Confirm that identifiers (Course/Section fields) are consistent with your course data.</p>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Upload the sections export into Edario using drag-and-drop or the upload icon.</p>
+                <p>Confirm that identifiers (Course/Section fields) are consistent with your course data.</p>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1150,18 +1182,20 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.6 — Request Student Data export</strong>
-            <small><span class="muted">
-              <p>Ask for a CSV/Excel file containing student data for next year (including incoming students).</p>
-              <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
-              <ul>
-                <li>Student ID</li>
-                <li>Next Year Grade Level</li>
-                <li>Last Name</li>
-                <li>First Name</li>
-                <li>Gender</li>
-                <li>Has Active IEP</li>
-              </ul>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Ask for a CSV/Excel file containing student data for next year (including incoming students).</p>
+                <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
+                <ul>
+                  <li>Student ID</li>
+                  <li>Next Year Grade Level</li>
+                  <li>Last Name</li>
+                  <li>First Name</li>
+                  <li>Gender</li>
+                  <li>Has Active IEP</li>
+                </ul>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1194,10 +1228,12 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.7 — Upload Student Data into Edario</strong>
-            <small><span class="muted">
-              <p>Upload the student data export into Edario using drag-and-drop or the upload icon.</p>
-              <p>Confirm key fields are recognized correctly (especially Student ID and Grade Level).</p>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Upload the student data export into Edario using drag-and-drop or the upload icon.</p>
+                <p>Confirm key fields are recognized correctly (especially Student ID and Grade Level).</p>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1230,18 +1266,20 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.8 — Request Student Requests export</strong>
-            <small><span class="muted">
-              <p>Ask for a CSV/Excel file containing student requests for this year.</p>
-              <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
-              <ul>
-                <li>Student ID</li>
-                <li>School Code</li>
-                <li>Course Code</li>
-                <li>Course Name</li>
-                <li>Alternate Course Code (only if students select alternate courses for their electives)</li>
-                <li>Next Grade Level</li>
-              </ul>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Ask for a CSV/Excel file containing student requests for this year.</p>
+                <p><span class="red-text">Column order is NOT important</span>, but the file should include:</p>
+                <ul>
+                  <li>Student ID</li>
+                  <li>School Code</li>
+                  <li>Course Code</li>
+                  <li>Course Name</li>
+                  <li>Alternate Course Code (only if students select alternate courses for their electives)</li>
+                  <li>Next Grade Level</li>
+                </ul>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1274,10 +1312,12 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.9 — Upload Student Requests into Edario</strong>
-            <small><span class="muted">
-              <p>Upload the student requests export into Edario.</p>
-              <p>If mapping appears, match the request fields to Edario&rsquo;s expected columns and save the mapping.</p>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Upload the student requests export into Edario.</p>
+                <p>If mapping appears, match the request fields to Edario&rsquo;s expected columns and save the mapping.</p>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1310,10 +1350,12 @@
 
           <div class="callout" style="margin:0;">
             <strong>3.10 — Validate &amp; finalize</strong>
-            <small><span class="muted">
-              <p>Run validation and resolve missing matches (teacher links, course/section keys, roster mismatches).</p>
-              <p>When the validation checks pass, you&rsquo;re ready for scheduling workflows.</p>
-            </span></small>
+            <small>
+              <div class="muted">
+                <p>Run validation and resolve missing matches (teacher links, course/section keys, roster mismatches).</p>
+                <p>When the validation checks pass, you&rsquo;re ready for scheduling workflows.</p>
+              </div>
+            </small>
           </div>
 
           <div class="callout" style="margin:0;">
@@ -1338,6 +1380,9 @@
         <button class="btn-solid ok" data-complete type="button">Done: Uploading Data</button>
       </div>
     </div>
+
+  </div>
+</div>
 
   </div>
 </div>

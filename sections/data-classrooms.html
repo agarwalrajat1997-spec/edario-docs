@@ -1,64 +1,409 @@
 ﻿<section class="doc-section" id="data-classrooms" data-title="Classrooms" data-path="Managing School Data / Classrooms">
-          <div class="panel">
-            <div class="panel-header">
-              <div class="meta">
-                <strong>Classrooms</strong>
-                <span>Rooms, room types, and suitability</span>
-              </div>
-              <div class="progress-pill">
-                <div class="bar"><i data-progressbar="data-classrooms"></i></div>
-                <div class="pct" data-progress="data-classrooms">0%</div>
-              </div>
-            </div>
+  <div class="panel">
+    <div class="panel-header">
+      <div class="meta">
+        <strong>Classrooms</strong>
+        <span>Room setup: capacity, type, departments, hard/soft compatibility</span>
+      </div>
+      <div class="progress-pill">
+        <div class="bar"><i data-progressbar="data-classrooms"></i></div>
+        <div class="pct" data-progress="data-classrooms">0%</div>
+      </div>
+    </div>
 
-            <div class="steps content" data-steps="data-classrooms">
-              <div class="step" data-step="1">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">1</div>
-                    <div class="step-title">
-                      <strong>Room list sanity</strong>
-                      <span>Codes, capacity, types</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <ul>
-                    <li>Room code format consistent (ex: â€œB-201â€)</li>
-                    <li>Special rooms marked (lab/gym/art/music)</li>
-                    <li>Capacity entered if used for caps/seat logic</li>
-                  </ul>
-                  <div class="btn-row">
-                  
-                  </div>
-                </div>
-              </div>
+    <div class="steps content" data-steps="data-classrooms">
 
-              <div class="step" data-step="2" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">2</div>
-                    <div class="step-title">
-                      <strong>See Data check</strong>
-                      <span>Spot duplicates and missing types</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Filter rooms by type to ensure special rooms are correctly labeled.</p>
-                  <div class="btn-row">
-                    <button class="btn-solid ok" data-complete>Finish Classrooms</button>
-                  </div>
-                </div>
-              </div>
+      <!-- =========================================================
+        STEP 1 — Overview
+      ========================================================== -->
+      <div class="step open" data-step="1" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-title">
+              <strong>Classrooms overview</strong>
+              <span>More than room names: capacity, type, and compatibility</span>
             </div>
           </div>
-        </section>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            In Edario, classrooms are not just room names. A classroom encodes <strong>capacity</strong>,
+            <strong>type</strong>, <strong>department alignment</strong>, and both <strong>hard</strong> and <strong>soft</strong>
+            compatibility signals that influence where sections can (and should) be placed.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <strong>Where to find it</strong>
+            <div class="muted">
+              <p><strong>School Data → Classrooms</strong></p>
+              <p>
+                Use this area to keep room attributes consistent and to avoid common placement failures caused by capacity/type mismatches.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Best practice</strong>: Keep room capacity accurate and classify special rooms using Classroom Type (labs, gyms, studios).
+              This makes later placement and reports much more reliable.
+            </small>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" type="button" data-toggle>Close</button>
+            <button class="btn-solid" type="button" data-toggle>Next: Add / Edit a classroom</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 2 — Add/Edit Classroom (inner wizard)
+      ========================================================== -->
+      <div class="step" data-step="2" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-title">
+              <strong>Add / Edit a classroom</strong>
+              <span>Name, departments, room type, capacity, and compatibility rules</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Use <strong>Add New Classroom</strong> to create a new room, or open an existing room to edit its attributes.
+            This setup controls how the scheduler may assign sections to rooms.
+          </p>
+
+          <!-- Jump bar -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="data-classrooms-step2">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Classroom name</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Departments</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Classroom type</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Max capacity</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="5">Multiple sections</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="6">Courses that NEED room</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="7">Teacher preferences</button>
+            </div>
+          </div>
+
+          <div class="media-slot" data-inner-steps="data-classrooms-step2" style="margin-top:14px;">
+
+            <!-- 2.1 -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.1 — Classroom Name</strong>
+                    <div class="muted">
+                      <p>
+                        A text input field labeled <strong>Classroom Name</strong>.
+                      </p>
+                      <ul>
+                        <li>Use the official room identifier (e.g., <strong>110</strong>, <strong>Gym</strong>, <strong>Lab 201</strong>).</li>
+                        <li>Keep naming consistent with your SIS / facility labeling.</li>
+                      </ul>
+                      <p>
+                        Consistent names improve search, reporting, and reduce accidental duplicates.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/data-classrooms-name.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>data-classrooms-name.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.2 -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.2 — Departments (multi-select chips)</strong>
+                    <div class="muted">
+                      <p>
+                        A section titled <strong>Departments</strong> with pill-style chips you can toggle on/off
+                        (examples: Applied Technology, Art, Business, Science, Special Education).
+                      </p>
+                      <p><strong>What this does</strong>:</p>
+                      <ul>
+                        <li>Associates the room to one or more departments.</li>
+                        <li>Helps filtering and ownership views across the app.</li>
+                        <li>Supports department-based workflows later (constraints, manual placement, reporting).</li>
+                      </ul>
+                      <p class="muted" style="margin-top:10px;">
+                        <strong>Recommended</strong>: assign every classroom to the department(s) that actually use/own it.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/data-classrooms-departments-chips.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Recommended GIF/video: “Assign a classroom to departments via chips.” Replace
+                    <code>data-classrooms-departments-chips.mp4</code>.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.3 -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.3 — Classroom Type (category chips)</strong>
+                    <div class="muted">
+                      <p>
+                        A section titled <strong>Classroom Type</strong> with selectable type chips
+                        (examples: Art, Auditorium, Band, Cafeteria, Ceramics, Choir Room, Computer Lab, Gym,
+                        Lab - Chem, Lab - Physics, Lecture Hall, etc.).
+                      </p>
+                      <p><strong>Why this is powerful</strong>:</p>
+                      <ul>
+                        <li>Improves room filtering in placement views and reports</li>
+                        <li>Supports compatibility logic (lab courses prefer lab rooms)</li>
+                        <li>Helps staff reason about placement quickly</li>
+                      </ul>
+                      <p>
+                        Choose the type that best describes the room&rsquo;s real-world function.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Example</strong>: Set Classroom Type = <strong>Lab - Chem</strong> for chemistry lab rooms so lab courses can be restricted correctly.
+                    </small>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/data-classrooms-type-lab-chem.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Recommended GIF/video: “Pick Classroom Type = Lab - Chem.” Replace
+                    <code>data-classrooms-type-lab-chem.mp4</code>.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.4 -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.4 — Max Classroom Capacity</strong>
+                    <div class="muted">
+                      <p>
+                        A numeric field for <strong>Max Classroom Capacity</strong> (example: <strong>30</strong>).
+                      </p>
+                      <p><strong>What this enforces</strong>:</p>
+                      <ul>
+                        <li>Hard limit: sections assigned to this room should not exceed this capacity.</li>
+                        <li>Improves seat feasibility and prevents unsafe/invalid placements.</li>
+                      </ul>
+                      <p>
+                        Keep this accurate; capacity is one of the most common sources of schedule issues.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/data-classrooms-capacity.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>data-classrooms-capacity.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.5 -->
+            <div data-inner-step="5" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.5 — Allows multiple sections? (Yes/No toggle)</strong>
+                    <div class="muted">
+                      <p>
+                        A labeled toggle: <strong>Allows multiple sections?</strong>
+                      </p>
+                      <p>
+                        This is critical for spaces like <strong>gyms</strong>, <strong>auditoriums</strong>, and <strong>cafeterias</strong>
+                        that can host more than one section in the same period.
+                      </p>
+                      <p><strong>Guidance shown</strong> (example):</p>
+                      <ul>
+                        <li>Gym can hold multiple sections in same period.</li>
+                      </ul>
+                      <p><strong>Use carefully</strong>:</p>
+                      <ul>
+                        <li>Set to <strong>Yes</strong> only if the space truly supports concurrent sections.</li>
+                        <li>Keep as <strong>No</strong> for normal classrooms and labs.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/data-classrooms-multi-sections-gym.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Recommended GIF/video: “Set Allows multiple sections = Yes (Gym example).” Replace
+                    <code>data-classrooms-multi-sections-gym.mp4</code>.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.6 -->
+            <div data-inner-step="6" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.6 — Course(s) that NEED to be in this classroom (hard binding)</strong>
+                    <div class="muted">
+                      <p>Section title:</p>
+                      <p><strong>Course(s) that NEED to be in this classroom</strong></p>
+                      <ul>
+                        <li>Empty state (no courses bound yet)</li>
+                        <li>Action button: <strong>Add Course that Needs Classroom</strong></li>
+                      </ul>
+                      <p>
+                        This is the reverse of a course-level classroom restriction:
+                        instead of “course needs room,” it is “room must host course.”
+                      </p>
+                      <p><strong>Use cases</strong>:</p>
+                      <ul>
+                        <li>A single TV Studio where TV production must meet</li>
+                        <li>A specific workshop with required equipment</li>
+                        <li>A dedicated band/choir room for rehearsals</li>
+                      </ul>
+                      <p>
+                        Use this only when the room binding is truly non-negotiable.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/data-classrooms-bind-course-to-room.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Recommended GIF/video: “Bind a course to a specific classroom.” Replace
+                    <code>data-classrooms-bind-course-to-room.mp4</code>.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.7 -->
+            <div data-inner-step="7" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.7 — Teacher(s) Who Prefer This Classroom (soft preference)</strong>
+                    <div class="muted">
+                      <p>Section title:</p>
+                      <p><strong>Teacher(s) Who Prefer This Classroom</strong></p>
+                      <ul>
+                        <li>Empty state (no preferences set)</li>
+                        <li>Action button: <strong>Add Teacher who Prefers Classroom</strong></li>
+                      </ul>
+                      <p>
+                        This encodes a preference signal (typically <strong>softer</strong> than “needs”).
+                        It helps Edario choose better room placements when multiple valid rooms exist.
+                      </p>
+                      <p><strong>Typical use</strong>:</p>
+                      <ul>
+                        <li>Teachers with “home rooms”</li>
+                        <li>Teachers tied to a building/wing</li>
+                        <li>Preferred lab or studio spaces</li>
+                      </ul>
+                      <p>
+                        Avoid using preference as a hard rule unless your process requires strict room assignment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/data-classrooms-add-teacher-preference.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Recommended GIF/video: “Add a teacher preferred room.” Replace
+                    <code>data-classrooms-add-teacher-preference.mp4</code>.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Inner nav -->
+          <div class="btn-row inner-nav" data-inner-nav="data-classrooms-step2" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ok" type="button" data-complete>Finish Classrooms</button>
+            <button class="btn-solid ghost" type="button" data-jump="data-teachers">Next: Teachers</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /steps -->
+  </div><!-- /panel -->
+</section>

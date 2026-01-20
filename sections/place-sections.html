@@ -1,88 +1,823 @@
 ﻿<section class="doc-section" id="place-sections" data-title="Place Sections" data-path="Setting up the Wizard / Place Sections">
-          <div class="panel">
-            <div class="panel-header">
-              <div class="meta">
-                <strong>Place Sections (Wizard Step 7)</strong>
-                <span>Permissions â†’ anchors â†’ review conflicts</span>
-              </div>
-              <div class="progress-pill">
-                <div class="bar"><i data-progressbar="place-sections"></i></div>
-                <div class="pct" data-progress="place-sections">0%</div>
-              </div>
-            </div>
+  <div class="panel">
+    <div class="panel-header">
+      <div class="meta">
+        <strong>Place Sections (Wizard Step 7)</strong>
+        <span>Permissions &rarr; anchors &rarr; review conflicts</span>
+      </div>
+      <div class="progress-pill">
+        <div class="bar"><i data-progressbar="place-sections"></i></div>
+        <div class="pct" data-progress="place-sections">0%</div>
+      </div>
+    </div>
 
-            <div class="steps content" data-steps="place-sections">
-              <div class="step" data-step="1">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">1</div>
-                    <div class="step-title">
-                      <strong>Placement Permissions</strong>
-                      <span>Control who can place what</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Use permissions to prevent accidental cross-department edits.</p>
-                  <div class="btn-row">
-                   
-                  </div>
-                </div>
-              </div>
+    <div class="steps content" data-steps="place-sections">
 
-              <div class="step" data-step="2" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">2</div>
-                    <div class="step-title">
-                      <strong>Manual Placements (anchors)</strong>
-                      <span>Place hardest-to-fit sections first</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>Anchor special programs/shared rooms/co-taught sections; then lock them.</p>
-                  <div class="btn-row">
-                  
-                  </div>
-                </div>
-              </div>
-
-              <div class="step" data-step="3" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">3</div>
-                    <div class="step-title">
-                      <strong>Placement Review</strong>
-                      <span>Conflicts, unplaced sections, bottlenecks</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <ul>
-                    <li>Eligibility too restrictive</li>
-                    <li>Room constraints too tight</li>
-                    <li>Course availability too tight</li>
-                    <li>Insufficient sections vs demand</li>
-                  </ul>
-                  <div class="btn-row">
-                    <button class="btn-solid ok" data-complete>Finish Place Sections</button>
-                    <button class="btn-solid ghost" data-jump="schedule-students">Next: Schedule Students</button>
-                  </div>
-                </div>
-              </div>
+      <!-- =========================
+        STEP 1 — Overview (What Step 7 does)
+      ========================== -->
+      <div class="step open" data-step="1" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-title">
+              <strong>Overview</strong>
+              <span>Manually place sections, then generate and review</span>
             </div>
           </div>
-        </section>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            <strong>Place Sections</strong> is where you manually place (some or all) sections into period slots before Edario auto-places anything remaining,
+            then you review issues and generate the schedule.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Step 7 sub-pages</strong>. Under the Step 7 header in the left sidebar, you will see:
+              <strong>Placement Permissions</strong>, <strong>Manual Placements</strong>, and <strong>Placement Review</strong>.
+              Each sub-page shows a <strong>green check</strong> when complete.
+            </small>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Goal</strong>. Decide who can manually place sections &rarr; optionally drag-and-drop key placements &rarr; run Placement Review to generate the schedule.
+              <strong>NOTE</strong>: generating in Step 7 places sections only; students are placed in Step 8.
+            </small>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <strong>Recommended workflow</strong>
+            <div class="muted">
+              <ol>
+                <li><strong>Placement Permissions</strong>: allow department supervisors (optional).</li>
+                <li><strong>Manual Placements</strong>: place priority sections (anchors), leave the rest for auto-placement.</li>
+                <li><strong>Placement Review</strong>: confirm readiness, generate schedule, and review conflicts/warnings.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-jump="create-sections" type="button">Back: Create Sections</button>
+            <button class="btn-solid" data-toggle type="button">Next: Placement Permissions</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 2 — Placement Permissions
+      ========================== -->
+      <div class="step" data-step="2" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-title">
+              <strong>Placement Permissions</strong>
+              <span>Choose which supervisors can manually place sections</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            <strong>Placement Permissions</strong> decides which department supervisors (if any) are allowed to place sections manually.
+            Any supervisor granted permission gets a chance to place sections <strong>before Edario auto-places the rest</strong>.
+          </p>
+
+          <div class="media-slot" style="margin-top:14px;">
+            <div class="grid-2" style="align-items:start; gap:14px;">
+
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <div class="callout" style="margin:0;">
+                  <strong>What you&rsquo;ll see</strong>
+                  <div class="muted">
+                    <ul>
+                      <li>Page title: <strong>Placement Permissions</strong></li>
+                      <li>Instructional subtitle explaining supervisor placement happens before auto-placement</li>
+                      <li>A central table with 3 columns:
+                        <ul>
+                          <li><strong>Department</strong> (e.g., 530, Applied Technology, Art, Business, Duties, Electives, etc.)</li>
+                          <li><strong>Supervisor(s)</strong> pill:
+                            <ul>
+                              <li>a selected supervisor (example: <strong>Admin, Edario</strong>), or</li>
+                              <li>a grey pill: <strong>No Supervisor</strong></li>
+                            </ul>
+                          </li>
+                          <li><strong>Allow to manually place their sections?</strong> (toggle switch per department)</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <strong>Toggle states (per department)</strong>
+                  <div class="muted">
+                    <ul>
+                      <li><strong>OFF</strong> (grey toggle): supervisor cannot do Manual Placements for that department.</li>
+                      <li><strong>ON</strong> (blue toggle): supervisor can do Manual Placements for that department.</li>
+                    </ul>
+                    <p style="margin-top:10px;">
+                      If a department shows <strong>No Supervisor</strong>, turning permission on has no practical effect until a supervisor exists for that department.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="callout" style="margin:0;">
+                  <small>
+                    <strong>Best practice</strong>. Only enable manual placement for departments where you want department-level ownership of anchors
+                    (e.g., elective labs, special equipment rooms, or unique rotation patterns).
+                  </small>
+                </div>
+              </div>
+
+              <div>
+                <video
+                  controls
+                  loop
+                  autoplay
+                  muted
+                  playsinline
+                  preload="metadata"
+                  style="width:100%; max-width:520px; border-radius:14px; display:block;"
+                  src="assets/videos/place-sections-placement-permissions.mp4">
+                  Sorry, your browser doesn&rsquo;t support embedded videos.
+                </video>
+                <div class="muted" style="margin-top:8px; font-size:12px;">
+                  Replace <code>place-sections-placement-permissions.mp4</code> with your real filename.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Manual Placements</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 3 — Manual Placements (INNER WIZARD)
+        Mini steps 3.1 → 3.7
+      ========================== -->
+      <div class="step" data-step="3" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-title">
+              <strong>Manual Placements</strong>
+              <span>Drag-and-drop sections into period slots</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            <strong>Manual Placements</strong> is the interactive placement workspace. You can drag-and-drop section cards into period slots.
+            Any sections not manually placed will be auto-placed by Edario afterwards.
+          </p>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="place-sections-step3">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Department list</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Locked screens</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Board header</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Teacher View</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="5">Classroom View</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="6">Section cards</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="7">Notes drawer</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="place-sections-step3" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 3.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.1 — Department selection screen</strong>
+                    <div class="muted">
+                      <p>At the top you will see:</p>
+                      <ul>
+                        <li>Title: <strong>Manual Placements</strong></li>
+                        <li>Instruction: &ldquo;Any sections that are not manually placed will be auto-placed by Edario afterwards!&rdquo;</li>
+                      </ul>
+
+                      <p>The main card shows: <strong>Choose a department to work on:</strong></p>
+                      <ul>
+                        <li>Department name (e.g., 530, Applied Technology, Art, Business, Duties, Electives&hellip;)</li>
+                        <li>Status: <strong>Locked</strong> (lock icon), <strong>Incomplete</strong>, or <strong>Complete</strong> (green check)</li>
+                        <li>Action button:
+                          <ul>
+                            <li><strong>Start</strong> (often grey/disabled-looking for incomplete)</li>
+                            <li><strong>Review</strong> (green) for completed departments</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Tip</strong>. Start with the department that has the most critical anchors (labs, workshops, shared spaces) to reduce conflicts later.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Next: Locked screens</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/manual-placements-department-list.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manual-placements-department-list.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 3.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.2 — Locked departments (gating behavior)</strong>
+                    <div class="muted">
+                      <p>Some departments show <strong>Locked</strong>. When locked, the row displays:</p>
+                      <ul>
+                        <li>Message: &ldquo;This screen is locked because there is a previously unfinished screen.&rdquo;</li>
+                        <li>Link: <strong>Go to Last Unfinished Step</strong></li>
+                      </ul>
+                      <p>This prevents manual placement until earlier required work is finished elsewhere in the wizard.</p>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Good practice</strong>. Resolve locked blockers first (usually missing approvals or incomplete earlier screens)
+                      before trying to manually place anchors.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Department list</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Board header</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/manual-placements-locked-state.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manual-placements-locked-state.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 3.3 ========= -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.3 — Inside a department (board header &amp; controls)</strong>
+                    <div class="muted">
+                      <p>When you open a department, you enter a large board view with:</p>
+                      <ul>
+                        <li>Back arrow (returns to department list)</li>
+                        <li>Supervisor chip: <strong>No Supervisor Assigned</strong> (pill) + link <strong>Add a Supervisor</strong></li>
+                        <li>Label: <strong>Department</strong></li>
+                        <li>Title: <strong>&lt;Department&gt; Schedule</strong> (e.g., Applied Technology Schedule)</li>
+                        <li>Search bar:
+                          <ul>
+                            <li>Teacher View placeholder: <strong>Search for a course or teacher&hellip;</strong></li>
+                            <li>Classroom View placeholder: <strong>Search for a course or classroom&hellip;</strong></li>
+                            <li>A small filter/settings icon at the right edge (sliders)</li>
+                          </ul>
+                        </li>
+                        <li>Right-side counters:
+                          <ul>
+                            <li><strong>Conflicts</strong> with a number (e.g., 79, 88)</li>
+                            <li><strong>Warnings</strong> with a number (e.g., 72)</li>
+                            <li>Link: <strong>See all</strong></li>
+                          </ul>
+                        </li>
+                        <li>View dropdown: <strong>Teacher View</strong> / <strong>Classroom View</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Tip</strong>. Use Conflicts/Warnings counters as a quick health check after moving anchors.
+                      If numbers jump unexpectedly, click <strong>See all</strong> to investigate.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Next: Teacher View</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="5">Next: Classroom View</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/manual-placements-board-header.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manual-placements-board-header.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 3.4 ========= -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.4 — Teacher View (grid + row details)</strong>
+                    <div class="muted">
+                      <p><strong>Grid headers</strong>:</p>
+                      <ul>
+                        <li>Left-most header: <strong>Teacher</strong></li>
+                        <li>Period columns: Period 1, Period 2, Period 3, Period 4/5, Period 5/6, Period 6/7, Period 7/8, Period 9, Period 10</li>
+                      </ul>
+
+                      <p><strong>Teacher rows</strong> show:</p>
+                      <ul>
+                        <li>Teacher name (e.g., Test, Teacher 762)</li>
+                        <li>Department tags under the name (e.g., Applied Technology, Business, Electives)</li>
+                        <li>Unplaced count line (e.g., <strong>&ldquo;11 unplaced sections&rdquo;</strong>)</li>
+                        <li>A vertical colored accent bar on the far left (row identifier)</li>
+                      </ul>
+
+                      <p><strong>Empty slots</strong>:</p>
+                      <ul>
+                        <li>Empty cells appear blank but show a faint <strong>+</strong> icon in a small circle</li>
+                        <li>This indicates a drop target / add placement action</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Back: Board header</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="6">Next: Section cards</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/manual-placements-teacher-view.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manual-placements-teacher-view.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 3.5 ========= -->
+            <div data-inner-step="5" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.5 — Classroom View (grid + row details)</strong>
+                    <div class="muted">
+                      <p><strong>Grid headers</strong>:</p>
+                      <ul>
+                        <li>Left-most header: <strong>Classroom</strong></li>
+                        <li>Period columns: Period 1, Period 2, Period 3, Period 4/5, Period 5/6, Period 6/7, Period 7/8, Period 9, Period 10</li>
+                      </ul>
+
+                      <p><strong>Classroom rows</strong> show:</p>
+                      <ul>
+                        <li>Room number/name (e.g., 502, 505, 509)</li>
+                        <li>Department label under room number (e.g., Applied Technology)</li>
+                        <li>A vertical colored accent bar on the far left (row identifier)</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Back: Board header</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="6">Next: Section cards</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/manual-placements-classroom-view.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manual-placements-classroom-view.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 3.6 ========= -->
+            <div data-inner-step="6" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.6 — Section cards (draggable items)</strong>
+                    <div class="muted">
+                      <p>Section cards appear inside grid cells in both Teacher View and Classroom View.</p>
+
+                      <p><strong>What is visible on each card</strong>:</p>
+                      <ul>
+                        <li>Dark top bar with:
+                          <ul>
+                            <li>Lock icon (left)</li>
+                            <li>Three-dot menu (right)</li>
+                          </ul>
+                        </li>
+                        <li>Course name (often truncated, e.g., &ldquo;Wood Techn&hellip;&rdquo;)</li>
+                        <li>Quarter strip: Q1 / Q2 / Q3 / Q4 (some quarters highlighted)</li>
+                        <li>Day cycle line: <strong>Day(s) 12345</strong> (example shown in UI)</li>
+                        <li>Bottom row info:
+                          <ul>
+                            <li>Room indicator + room number (e.g., 502 / 505 / 509 when placed)</li>
+                            <li>Small icon cluster at bottom-right with a number (e.g., 15, 20)</li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <p><strong>Editable / interactive behavior</strong> (as shown in your screens):</p>
+                      <ul>
+                        <li>Cards can be <strong>grabbed and moved</strong> between period cells (drag-and-drop placement).</li>
+                        <li>Empty cells show a faint <strong>+</strong> icon indicating a valid drop/add target.</li>
+                        <li>Red-highlighted cards/cells indicate a conflict/invalid placement or a flagged state during moves.</li>
+                        <li>The ellipsis menu suggests additional card actions (depends on your app configuration).</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Best practice</strong>. Manually place only the hardest-to-solve anchors first (special rooms, shared staff, multi-period blocks),
+                      then let auto-placement fill the rest.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Back: Teacher View</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="5">Back: Classroom View</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="7">Next: Notes drawer</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/manual-placements-section-cards.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manual-placements-section-cards.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 3.7 ========= -->
+            <div data-inner-step="7" hidden>
+              <div class="inner-grid-2">
+
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>3.7 — Manual Placement Notes drawer</strong>
+                    <div class="muted">
+                      <p>A right-side slide-out drawer titled <strong>Manual Placement Notes</strong> can appear.</p>
+                      <p><strong>Visible elements</strong>:</p>
+                      <ul>
+                        <li>Close <strong>X</strong> in the drawer header</li>
+                        <li>Empty state text: &ldquo;No notes have been left yet&hellip;&rdquo;</li>
+                        <li>Floating circular <strong>+</strong> button at the bottom-right (add a note)</li>
+                      </ul>
+                      <p>Use notes to capture why anchors were placed a certain way (helpful for audits and team handoff).</p>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="6">Back: Section cards</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Department list</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/manual-placements-notes-drawer.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>manual-placements-notes-drawer.mp4</code> with your real filename.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="place-sections-step3" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Placement Review</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================
+        STEP 4 — Placement Review (INNER WIZARD)
+        Mini steps 4.1 → 4.4
+      ========================== -->
+      <div class="step" data-step="4" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">4</div>
+            <div class="step-title">
+              <strong>Placement Review</strong>
+              <span>Generate schedule and review conflicts/warnings</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            <strong>Placement Review</strong> is the final check + schedule generation step for placing sections.
+            You will confirm readiness, generate the schedule, then review conflicts/warnings in the generated board.
+          </p>
+
+          <!-- TOP JUMP BUTTONS -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="place-sections-step4">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Locked list</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Ready gate</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Generating</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Generated board</button>
+            </div>
+          </div>
+
+          <!-- INNER WIZARD -->
+          <div class="media-slot" data-inner-steps="place-sections-step4" style="margin-top:14px;">
+
+            <!-- ========= INNER STEP 4.1 ========= -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.1 — Department list with lock states</strong>
+                    <div class="muted">
+                      <p>You may see a department list similar to Manual Placements:</p>
+                      <ul>
+                        <li>Department name</li>
+                        <li>Status:
+                          <ul>
+                            <li><strong>Locked</strong> (lock icon) with message:
+                              &ldquo;This screen is locked because there is a previously unfinished screen.&rdquo;</li>
+                            <li><strong>Complete</strong> (green check)</li>
+                          </ul>
+                        </li>
+                        <li>For locked rows:
+                          <ul>
+                            <li>Link: <strong>Go to Last Unfinished Step</strong></li>
+                          </ul>
+                        </li>
+                        <li>For complete rows:
+                          <ul>
+                            <li><strong>Review</strong> button (green)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p>This reinforces that review depends on completing required earlier work.</p>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Next: Ready gate</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/placement-review-locked-list.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>placement-review-locked-list.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 4.2 ========= -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.2 — &ldquo;Whenever You are Ready!&rdquo; (Generate Schedule gate)</strong>
+                    <div class="muted">
+                      <p>A centered confirmation card appears with:</p>
+                      <ul>
+                        <li>Illustrated calendar icon with a green check</li>
+                        <li>Heading: <strong>Whenever You are Ready!</strong></li>
+                        <li>Explanation text confirming constraints, approvals, and manual placements are done</li>
+                        <li><strong>NOTE</strong>: &ldquo;This will only place sections. No students will be placed until the next step.&rdquo;</li>
+                        <li>Main button: <strong>Generate Schedule</strong> (large green CTA)</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Next: Generating state</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="1">Back: Locked list</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/placement-review-ready-gate.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>placement-review-ready-gate.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 4.3 ========= -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.3 — Schedule is being generated&hellip; (progress)</strong>
+                    <div class="muted">
+                      <p>A progress card displays:</p>
+                      <ul>
+                        <li>Small graphic (colored blocks)</li>
+                        <li>Heading: <strong>Schedule is being generated&hellip;</strong></li>
+                        <li>Text indicating Edario is generating and you should check back shortly</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="4">Next: Generated board</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Back: Ready gate</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/placement-review-generating.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>placement-review-generating.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========= INNER STEP 4.4 ========= -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.4 — Generated schedule view (post-generation)</strong>
+                    <div class="muted">
+                      <p>After generation, you see a schedule board similar to Manual Placements, showing:</p>
+                      <ul>
+                        <li>Department label + schedule title (e.g., Health and Physical Education Schedule)</li>
+                        <li>Search bar + view dropdown (Teacher View / Classroom View)</li>
+                        <li>Conflicts / Warnings counters (with <strong>See all</strong>)</li>
+                        <li>Period grid across the top (including combined blocks like Period 4/5)</li>
+                        <li>Teacher rows on the left</li>
+                        <li>Section cards placed across periods</li>
+                      </ul>
+
+                      <p><strong>Issue highlighting</strong>:</p>
+                      <ul>
+                        <li>A card may appear <strong>red-highlighted</strong> to indicate a conflict/issue needing review.</li>
+                        <li>Use Conflicts/Warnings and <strong>See all</strong> to locate the cause and decide if anchors need adjustment.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Done standard for Step 7</strong>. Placement Permissions completed &rarr; Manual Placements done (or skipped) without locked blockers &rarr;
+                      Placement Review reaches &ldquo;Whenever You are Ready!&rdquo; and you generate the schedule &rarr; conflicts/warnings reviewed.
+                    </small>
+                  </div>
+
+                  <div class="btn-row" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="btn-solid ghost" type="button" data-inner-jump="3">Back: Generating state</button>
+                    <button class="btn-solid ghost" type="button" data-inner-jump="2">Back: Ready gate</button>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/placement-review-generated-board.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>placement-review-generated-board.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SHARED PREV / NEXT -->
+          <div class="btn-row inner-nav" data-inner-nav="place-sections-step4" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ok" data-complete type="button">Finish Place Sections</button>
+            <button class="btn-solid" data-jump="place-students" type="button">Next: Place Students</button>
+            <button class="btn-solid ghost" data-jump="create-sections" type="button">Back: Create Sections</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /steps -->
+  </div><!-- /panel -->
+</section>

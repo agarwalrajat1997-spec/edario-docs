@@ -1,75 +1,1516 @@
 ﻿<section class="doc-section" id="magnetboard" data-title="Magnetboard & Finalize" data-path="Magnetboard / Magnetboard & Finalize">
-          <div class="panel">
-            <div class="panel-header">
-              <div class="meta">
-                <strong>Magnetboard & Finalize</strong>
-                <span>Visual schedule refinement and lock-in</span>
-              </div>
-              <div class="progress-pill">
-                <div class="bar"><i data-progressbar="magnetboard"></i></div>
-                <div class="pct" data-progress="magnetboard">0%</div>
-              </div>
-            </div>
+  <div class="panel">
+    <div class="panel-header">
+      <div class="meta">
+        <strong>Magnetboard & Finalize</strong>
+        <span>Visual schedule refinement and lock-in</span>
+      </div>
+      <div class="progress-pill">
+        <div class="bar"><i data-progressbar="magnetboard"></i></div>
+        <div class="pct" data-progress="magnetboard">0%</div>
+      </div>
+    </div>
 
-            <div class="steps content" data-steps="magnetboard">
-              <div class="step" data-step="1">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">1</div>
-                    <div class="step-title">
-                      <strong>Use Magnetboard for final adjustments</strong>
-                      <span>Drag, swap, lock, resolve conflicts visually</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <p>
-                    Magnetboard is the â€œlast mileâ€: visualize density and fix bottlenecks quickly.
-                  </p>
-                  <div class="callout">
-                    <strong>Suggested workflow</strong>
-                    <small>
-                      Lock anchors â†’ fix biggest conflicts â†’ rerun student scheduling if needed â†’ repeat until stable.
-                    </small>
-                  </div>
-                  <div class="btn-row">
-          
-                  </div>
-                </div>
-              </div>
+    <div class="steps content" data-steps="magnetboard">
 
-              <div class="step" data-step="2" data-locked="true">
-                <div class="step-head">
-                  <div class="step-left">
-                    <div class="step-num">2</div>
-                    <div class="step-title">
-                      <strong>Final QA checklist</strong>
-                      <span>Before publishing</span>
-                    </div>
-                  </div>
-                  <div class="step-right">
-                    <span class="chip locked" data-chip>Locked</span>
-                    <button class="btn-solid ghost" data-toggle disabled>Open</button>
-                  </div>
-                </div>
-                <div class="step-body">
-                  <ul>
-                    <li>Teacher daily caps respected</li>
-                    <li>Special rooms not double-booked</li>
-                    <li>Course caps not exceeded</li>
-                    <li>High-demand courses satisfied as much as possible</li>
-                    <li>Labels/teams constraints satisfied</li>
-                  </ul>
-                  <div class="btn-row">
-                    <button class="btn-solid ok" data-complete>Finish Magnetboard</button>
-                    <button class="btn-solid ghost" data-jump="start">Back to Start</button>
-                  </div>
-                </div>
-              </div>
+      <!-- =========================================================
+        STEP 1 — Overview: What Magnetboard is and when to use it
+      ========================================================== -->
+      <div class="step open" data-step="1" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-title">
+              <strong>What Magnetboard is</strong>
+              <span>Your final-mile scheduling workspace</span>
             </div>
           </div>
-        </section>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            <strong>Magnetboard</strong> is the “final-mile” workspace where a school reviews the schedule Edario generated (or the current draft),
+            moves sections around, resolves conflicts/warnings, validates quality through reports, and fine-tunes exact section details using
+            <strong>Edit Section</strong>.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <strong>Use Magnetboard to</strong>
+            <div class="muted">
+              <ul>
+                <li>Review the generated schedule (or your latest draft)</li>
+                <li>Place / re-place section cards into period slots (drag-and-drop)</li>
+                <li>Resolve <strong>Conflicts</strong> and reduce <strong>Warnings</strong></li>
+                <li>Validate schedule quality using <strong>Reports</strong> (matched requests, conflict matrix, balancing)</li>
+                <li>Open <strong>Edit Section</strong> to adjust course/teacher/room/period(s)/days/quarters and manage enrolled students</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <small>
+              <strong>Designed like a digital board</strong>: cards (sections) + grid (periods) + views (Teacher/Classroom/Student).
+              Schools iterate here until conflicts are resolved, warnings are acceptable, and reports confirm quality.
+            </small>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Global header &amp; controls</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 2 — Global header + Magnetboard header + top controls
+      ========================================================== -->
+      <div class="step" data-step="2" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-title">
+              <strong>Header &amp; top controls</strong>
+              <span>School year, identity, schedule KPIs</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Magnetboard has two stacked header layers: (1) the global app header (year + account) and (2) the schedule workspace header
+            (schedule name + match quality + conflicts/warnings).
+          </p>
+
+          <!-- Jump bar -->
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="magnetboard-step2">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">School Year dropdown</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Top-right icons &amp; identity</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Schedule title</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Match / Conflicts / Warnings</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="5">File + Reports strip</button>
+            </div>
+          </div>
+
+          <div class="media-slot" data-inner-steps="magnetboard-step2" style="margin-top:14px;">
+
+            <!-- 2.1 -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.1 — School Year dropdown (top-left)</strong>
+                    <div class="muted">
+                      <p>
+                        At the very top-left, the <strong>School Year dropdown</strong> (e.g., <strong>2021–2022</strong>) sets the active scheduling context.
+                      </p>
+                      <ul>
+                        <li>Switching year changes the schedule data and reports you’re viewing/editing.</li>
+                        <li>Always confirm the correct year before making schedule edits.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-school-year-dropdown.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-school-year-dropdown.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.2 -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.2 — Top-right icons + school identity</strong>
+                    <div class="muted">
+                      <p>Top-right global controls include:</p>
+                      <ul>
+                        <li>Menu/list icon (quick navigation / compact menu)</li>
+                        <li>Bell icon (notifications)</li>
+                        <li>School name + user identity (e.g., <strong>Test High School</strong> and <strong>Agarwal, Rajat</strong> with profile circle)</li>
+                      </ul>
+                      <p>These controls are global to the session and remain available across Magnetboard views and reports.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-top-right-identity.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-top-right-identity.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.3 -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.3 — Schedule name block</strong>
+                    <div class="muted">
+                      <p>The schedule workspace header shows:</p>
+                      <ul>
+                        <li>Small label: <strong>Schedule Name</strong></li>
+                        <li>Large title: e.g., <strong>New Schedule v2</strong></li>
+                      </ul>
+                      <p>This identifies which schedule draft you are reviewing and refining.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-schedule-name.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-schedule-name.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.4 -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.4 — Match %, Conflicts, Warnings, and “See all”</strong>
+                    <div class="muted">
+                      <p><strong>Key KPI</strong>: a large match metric (e.g., <strong>Match: 68.87%</strong>) is shown at the top-right.</p>
+                      <ul>
+                        <li><strong>Match %</strong> is a headline quality signal (primarily request matching).</li>
+                        <li><strong>Conflicts</strong> count and <strong>Warnings</strong> count appear next to it (e.g., Conflicts 88, Warnings 72).</li>
+                        <li>Link: <strong>See all</strong> opens the conflict/warning management screen.</li>
+                        <li>A vertical ellipsis <strong>⋮</strong> appears nearby (schedule-level more options menu; items not expanded in the screenshot).</li>
+                      </ul>
+                      <p>Schools monitor these numbers as they iterate: conflicts should drop; warnings should become manageable/acceptable.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-match-conflicts-warnings.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-match-conflicts-warnings.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2.5 -->
+            <div data-inner-step="5" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>2.5 — Menu strip: File + Reports</strong>
+                    <div class="muted">
+                      <p>Directly under the schedule header you see:</p>
+                      <ul>
+                        <li><strong>File</strong></li>
+                        <li><strong>Reports</strong> (dropdown)</li>
+                      </ul>
+
+                      <p><strong>Reports dropdown</strong> includes:</p>
+                      <ul>
+                        <li>Schedule Summary</li>
+                        <li>Conflict Matrix</li>
+                        <li>Section Balancing</li>
+                        <li>Student Summary (listed; not expanded in screenshots)</li>
+                      </ul>
+
+                      <p>Reports are how schools validate schedule quality systematically (not optional if you want confidence).</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-file-reports-strip.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-file-reports-strip.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Inner nav -->
+          <div class="btn-row inner-nav" data-inner-nav="magnetboard-step2" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Search, filters &amp; views</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 3 — Search + filtering + view selector + bug icon
+      ========================================================== -->
+      <div class="step" data-step="3" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-title">
+              <strong>Search, filters, and views</strong>
+              <span>Teacher / Classroom / Student lens</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Magnetboard is designed for rapid debugging. The search bar, filter icon, and view selector are the most-used controls during refinement.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <strong>Search bar (changes by context)</strong>
+            <div class="muted">
+              <ul>
+                <li>Teacher View: <strong>Search for a course or teacher&hellip;</strong></li>
+                <li>Classroom View: <strong>Search for a course or classroom&hellip;</strong></li>
+                <li>Reports: <strong>Search for a course or course code&hellip;</strong></li>
+              </ul>
+              <p>The sliders icon next to search is used for additional filtering controls (not expanded in screenshots).</p>
+            </div>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <strong>View selector (right side above grid)</strong>
+            <div class="muted">
+              <ul>
+                <li><strong>Teacher View</strong>: rows are teachers; period columns show each teacher&rsquo;s assignments.</li>
+                <li><strong>Classroom View</strong>: rows are rooms; period columns show what runs in each room.</li>
+                <li><strong>Student View</strong>: a student-centric lens for auditing individual schedules and outcomes.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <strong>Bug icon (reporting)</strong>
+            <div class="muted">
+              <p>
+                A small bug/insect icon sits next to the view dropdown. It provides a fast way to report an issue while you&rsquo;re building the schedule.
+              </p>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Grid + cards</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 4 — The grid: structure + empty slots + row headers
+      ========================================================== -->
+      <div class="step" data-step="4" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">4</div>
+            <div class="step-title">
+              <strong>The Magnetboard grid</strong>
+              <span>Periods across the top, entities down the side</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            The grid is where you place/re-place sections. It is the same schedule data displayed through different lenses (Teacher/Classroom/Student).
+          </p>
+
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="magnetboard-step4">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Grid structure</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Combined periods</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Empty &ldquo;+&rdquo; slots</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Row headers</button>
+            </div>
+          </div>
+
+          <div class="media-slot" data-inner-steps="magnetboard-step4" style="margin-top:14px;">
+
+            <!-- 4.1 -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.1 — Grid structure</strong>
+                    <div class="muted">
+                      <ul>
+                        <li>Left-most column is the row entity: Teacher / Classroom / Student</li>
+                        <li>Columns across the top are periods (Period 1, Period 2, Period 3&hellip;)</li>
+                        <li>Each cell can hold one or more section cards depending on your rules and conflicts</li>
+                      </ul>
+                      <p>Magnetboard is intended for rapid “move card &rarr; evaluate &rarr; adjust” iteration.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-grid-structure.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-grid-structure.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4.2 -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.2 — Combined periods</strong>
+                    <div class="muted">
+                      <p>Across the top, you may see combined blocks such as:</p>
+                      <ul>
+                        <li>Period 4/5</li>
+                        <li>Period 5/6</li>
+                        <li>Period 6/7</li>
+                        <li>Period 7/8</li>
+                      </ul>
+                      <p>This indicates longer/combined scheduling blocks that impact where multi-period sections can fit.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-combined-periods.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-combined-periods.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4.3 -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.3 — Empty slots show a subtle &ldquo;+&rdquo;</strong>
+                    <div class="muted">
+                      <ul>
+                        <li>Empty cells show a subtle <strong>+</strong> placeholder.</li>
+                        <li>This signals a valid placement slot / insertion point.</li>
+                        <li>These empty drop zones are targets when moving sections around.</li>
+                      </ul>
+                      <p>Schools use these quickly to find where a section could potentially land.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-empty-plus-slots.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-empty-plus-slots.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4.4 -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>4.4 — Row headers (Teacher and Classroom examples)</strong>
+                    <div class="muted">
+                      <p><strong>Teacher View</strong> row header typically shows:</p>
+                      <ul>
+                        <li>Teacher name (e.g., “Test, Teacher 1055”)</li>
+                        <li>Department label underneath (e.g., Science)</li>
+                        <li>A link like <strong>Unplaced sections</strong> (workflow accelerator)</li>
+                      </ul>
+
+                      <p><strong>Classroom View</strong> row header typically shows:</p>
+                      <ul>
+                        <li>Room number (e.g., 110)</li>
+                        <li>Descriptor/type under the room (e.g., “Special Education”)</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Why &ldquo;Unplaced sections&rdquo; matters</strong>:
+                      it helps you jump directly to what still needs placement for that teacher/category, instead of scanning the whole board.
+                    </small>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-row-headers.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-row-headers.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="btn-row inner-nav" data-inner-nav="magnetboard-step4" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Section cards</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 5 — Section cards + drag/drop feedback + lock/menu
+      ========================================================== -->
+      <div class="step" data-step="5" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">5</div>
+            <div class="step-title">
+              <strong>Section cards &amp; interactions</strong>
+              <span>Locks, menus, quarters/days, room &amp; student count</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Every scheduled item appears as a compact <strong>section card</strong> inside a cell.
+            Cards are the movable units in Magnetboard.
+          </p>
+
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="magnetboard-step5">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Card anatomy</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Lock + menu</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Quarters + days</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Room + student count</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="5">Drag/drop feedback</button>
+            </div>
+          </div>
+
+          <div class="media-slot" data-inner-steps="magnetboard-step5" style="margin-top:14px;">
+
+            <!-- 5.1 -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>5.1 — Card anatomy (what you can see)</strong>
+                    <div class="muted">
+                      <ul>
+                        <li>Header bar color indicates status:
+                          <ul>
+                            <li>Standard dark header = normal placed section</li>
+                            <li>Red/pink styling = problematic condition (conflict-level indicator)</li>
+                            <li>Some cards show a green <strong>Lab</strong> tag (special flagged section)</li>
+                          </ul>
+                        </li>
+                        <li>Course name + code (e.g., “World History CP (SOC9930&hellip;)”)</li>
+                        <li>Quarter markers: Q1, Q2, Q3, Q4 chips</li>
+                        <li>Day(s) indicator (e.g., Day(s) 12345 or subsets)</li>
+                        <li>Room number indicator (bottom-left icon + room number)</li>
+                        <li>Student count indicator (bottom-right icon + count)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-card-anatomy.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-card-anatomy.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5.2 -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>5.2 — Lock icon + three-dot menu</strong>
+                    <div class="muted">
+                      <ul>
+                        <li>Lock icon appears at top-left of many cards.</li>
+                        <li>Lock color can vary (yellow/red shown), implying different states (exact rule not expanded in screenshots).</li>
+                        <li>Three-dot kebab menu appears at top-right of the card (per-section action menu).</li>
+                      </ul>
+                      <p>
+                        Even when you primarily drag-and-drop, these controls are first-class UI concepts for managing section behavior/actions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-card-lock-menu.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-card-lock-menu.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5.3 -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>5.3 — Quarter markers + days indicator</strong>
+                    <div class="muted">
+                      <ul>
+                        <li>Cards display quarter chips (Q1–Q4) to show which marking periods the section runs.</li>
+                        <li>Cards display Day(s) 12345 (or subsets) to show day-cycle rotation pattern.</li>
+                      </ul>
+                      <p>
+                        These two fields are essential when interpreting whether a section should occupy a slot in every quarter/day or only specific ones.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-card-quarters-days.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-card-quarters-days.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5.4 -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>5.4 — Room + student count indicators</strong>
+                    <div class="muted">
+                      <ul>
+                        <li>Bottom-left icon + room number (e.g., 110/111) indicates assigned classroom.</li>
+                        <li>Bottom-right student icon + number (e.g., 7, 20, 30) indicates current enrolled count.</li>
+                      </ul>
+                      <p>
+                        These indicators help you spot room capacity mismatches and overloaded sections during refinement.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-card-room-students.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-card-room-students.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5.5 -->
+            <div data-inner-step="5" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>5.5 — Dragging, moving, and placement feedback</strong>
+                    <div class="muted">
+                      <ul>
+                        <li>Cards are draggable: you can grab a section card and move it to another period slot.</li>
+                        <li>Empty slots show subtle <strong>+</strong> targets, suggesting valid placement areas.</li>
+                        <li>During movement/interaction, you may see a small <strong>multi-colored dot cluster</strong> between cards:
+                          <ul>
+                            <li>Document as visual drop/insert feedback while dragging (exact color rules not shown).</li>
+                          </ul>
+                        </li>
+                        <li>Immediate visual warnings:
+                          <ul>
+                            <li>If a move introduces a problem, the card can shift into a red/pink conflict styling.</li>
+                            <li>This prompts you to fix via moving again, reviewing conflicts, or using Edit Section.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Operational note</strong>: Use quick moves to fix obvious blockers, then validate systematically with Reports.
+                    </small>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-drag-drop-feedback.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-drag-drop-feedback.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="btn-row inner-nav" data-inner-nav="magnetboard-step5" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Conflicts &amp; Warnings</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 6 — Reports (INNER WIZARD)
+        NOTE: This is magnetboard-step6 (requested continuation)
+      ========================================================== -->
+      <div class="step" data-step="6" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">6</div>
+            <div class="step-title">
+              <strong>Reports</strong>
+              <span>Validate schedule quality systematically</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Reports are how a school validates schedule quality beyond intuition.
+            They help you verify matched requests, detect course clashes, and rebalance load across periods/days.
+          </p>
+
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="magnetboard-step6">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Reports list</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Schedule Summary</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Conflict Matrix</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Section Balancing</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="5">Student Summary</button>
+            </div>
+          </div>
+
+          <div class="media-slot" data-inner-steps="magnetboard-step6" style="margin-top:14px;">
+
+            <!-- 6.1 -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>6.1 — Reports dropdown (what’s inside)</strong>
+                    <div class="muted">
+                      <p>From the menu strip under the schedule title, open <strong>Reports</strong> to access:</p>
+                      <ul>
+                        <li><strong>Schedule Summary</strong></li>
+                        <li><strong>Conflict Matrix</strong></li>
+                        <li><strong>Section Balancing</strong></li>
+                        <li><strong>Student Summary</strong> (listed; not expanded in screenshots)</li>
+                      </ul>
+                      <p>
+                        The reports search placeholder becomes:
+                        <strong>Search for a course or course code&hellip;</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-reports-dropdown.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-reports-dropdown.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6.2 -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>6.2 — Schedule Summary</strong>
+                    <div class="muted">
+                      <p>Schedule Summary provides a table (example shown for Non-Elective Courses) with columns like:</p>
+                      <ul>
+                        <li>Code</li>
+                        <li>Course</li>
+                        <li>Requests</li>
+                        <li>Matched Requests</li>
+                        <li>Available Seats</li>
+                        <li>Placed Sections</li>
+                        <li>Unplaced Sections</li>
+                      </ul>
+
+                      <p>Visible controls:</p>
+                      <ul>
+                        <li>Row expand arrows + <strong>Expand All</strong></li>
+                        <li>An overall matched percent header (e.g., “68% matched”)</li>
+                      </ul>
+
+                      <p><strong>How schools use it</strong>:</p>
+                      <ul>
+                        <li>Identify courses with high requests but low matched requests.</li>
+                        <li>Find bottlenecks: too few seats, unplaced sections, poor distribution.</li>
+                        <li>Decide whether to add sections, adjust placement, or rebalance periods.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-report-schedule-summary.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-report-schedule-summary.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6.3 -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>6.3 — Conflict Matrix</strong>
+                    <div class="muted">
+                      <p>Conflict Matrix is a pairwise clash detector. For a selected course (example shown: AM Votech), it displays:</p>
+                      <ul>
+                        <li>Conflicting Courses list</li>
+                        <li># of Conflicting Students</li>
+                      </ul>
+
+                      <p><strong>How schools use it</strong>:</p>
+                      <ul>
+                        <li>Find which courses conflict most with a given course (core vs electives, lunch vs labs, etc.).</li>
+                        <li>Decide if a course needs different period distribution or more sections.</li>
+                        <li>Support decisions with evidence (not guesswork).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-report-conflict-matrix.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-report-conflict-matrix.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6.4 -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>6.4 — Section Balancing</strong>
+                    <div class="muted">
+                      <p>Section Balancing helps you distribute schedule load and avoid lopsided periods/days.</p>
+
+                      <p><strong>Balancing tables visible</strong>:</p>
+                      <ul>
+                        <li><strong>Section &amp; Student Balance (by period)</strong>: matrix with periods across the top showing:
+                          <ul>
+                            <li>Section counts</li>
+                            <li>Student counts by quarter (Q1–Q4)</li>
+                          </ul>
+                        </li>
+                        <li><strong>Lab Balance</strong>: lab-specific matrix by day and period showing:
+                          <ul>
+                            <li># Labs</li>
+                            <li>Students in Lab</li>
+                          </ul>
+                        </li>
+                        <li><strong>Balancing by Course</strong>: per-course mini placement board showing where each section lives across periods, plus total students per section.</li>
+                      </ul>
+
+                      <p><strong>How schools use it</strong>:</p>
+                      <ul>
+                        <li>Detect overloaded blocks (too many labs on one day/period).</li>
+                        <li>Move sections to even out load.</li>
+                        <li>Confirm improvements are real (numbers change), not just “looks better.”</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-report-section-balancing.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-report-section-balancing.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6.5 -->
+            <div data-inner-step="5" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>6.5 — Student Summary</strong>
+                    <div class="muted">
+                      <p>Student Summary appears in the Reports list (not opened in screenshots).</p>
+                      <p>Document it as:</p>
+                      <ul>
+                        <li>A student-centric schedule outcome summary.</li>
+                        <li>Typically used to audit individual student schedules, gaps, and placement outcomes.</li>
+                      </ul>
+                      <p>Use Student Summary late in the process for final student-level confidence checks.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-report-student-summary.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-report-student-summary.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ====== CONTINUATION REQUESTED BY YOU ====== -->
+          <div class="btn-row inner-nav" data-inner-nav="magnetboard-step6" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Conflicts &amp; Warnings</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 7 — Conflicts & Warnings management (See all)
+      ========================================================== -->
+      <div class="step" data-step="7" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">7</div>
+            <div class="step-title">
+              <strong>Conflicts &amp; Warnings</strong>
+              <span>Use “See all” to triage and resolve</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Conflicts and warnings are surfaced in the header counters. Click <strong>See all</strong> to open the management screen.
+            Schools use this to systematically reduce blockers, then intentionally ignore only what is acceptable.
+          </p>
+
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="magnetboard-step7">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Tabs &amp; counts</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Conflict cards</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Ignore workflow</button>
+            </div>
+          </div>
+
+          <div class="media-slot" data-inner-steps="magnetboard-step7" style="margin-top:14px;">
+
+            <!-- 7.1 -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>7.1 — Tabs and counts</strong>
+                    <div class="muted">
+                      <p>The management screen includes tab headers such as:</p>
+                      <ul>
+                        <li><strong>Conflicts</strong> (e.g., 84)</li>
+                        <li><strong>Warnings</strong> (e.g., 76)</li>
+                        <li><strong>Ignored Conflicts</strong> (e.g., 0)</li>
+                        <li><strong>Ignored Warnings</strong> (e.g., 0)</li>
+                      </ul>
+                      <p>
+                        This supports an operational reality:
+                        some issues are actively being worked, others are intentionally accepted (ignored) to keep the active list meaningful.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-conflicts-tabs.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-conflicts-tabs.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7.2 -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>7.2 — Conflict cards (what’s displayed)</strong>
+                    <div class="muted">
+                      <p>A typical conflict item shows:</p>
+                      <ul>
+                        <li>Title (e.g., &ldquo;Test, Teacher 752 is double booked!&rdquo;)</li>
+                        <li>A period list (e.g., Period 9, Period 10)</li>
+                        <li>The conflicting sections/courses</li>
+                        <li>Action button: <strong>Ignore Conflict</strong></li>
+                        <li>Colored left border (purple shown) and small icons to support quick scanning</li>
+                      </ul>
+
+                      <p><strong>How schools use it</strong>:</p>
+                      <ul>
+                        <li>Start with the biggest blockers (teacher/room double bookings).</li>
+                        <li>Search on Magnetboard to find the involved courses/teachers quickly.</li>
+                        <li>Fix by moving a card or using Edit Section for precise changes.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-conflict-cards.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-conflict-cards.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7.3 -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>7.3 — Ignoring conflicts/warnings intentionally</strong>
+                    <div class="muted">
+                      <p>Ignoring is how a school says: &ldquo;We accept this issue&rdquo; so it no longer pollutes the active list.</p>
+                      <p><strong>Recommended operational policy</strong>:</p>
+                      <ul>
+                        <li>Fix conflicts first (true feasibility blockers).</li>
+                        <li>Reduce warnings next (quality improvements).</li>
+                        <li>Only ignore when genuinely acceptable, and ideally record why (internal process).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-ignore-workflow.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-ignore-workflow.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="btn-row inner-nav" data-inner-nav="magnetboard-step7" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+            <button class="btn-solid" data-toggle type="button">Next: Edit Section</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 8 — Edit Section (deep, precise changes)
+      ========================================================== -->
+      <div class="step" data-step="8" data-locked="false" data-inner-wizard="true">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">8</div>
+            <div class="step-title">
+              <strong>Edit Section</strong>
+              <span>Fine-tune course, teacher, room, time, and students</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Use <strong>Edit Section</strong> when drag-and-drop is not precise enough, or when you need to modify the exact makeup of a section:
+            course, teacher(s), room, periods, quarters, days, and enrolled students.
+          </p>
+
+          <div class="inner-jumpbar-wrap" style="margin-top:14px;">
+            <div class="inner-jumpbar" data-inner-jumps="magnetboard-step8">
+              <button type="button" class="inner-jumpbtn" data-inner-jump="1">Main Section panel</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="2">Core fields</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="3">Quarters + days</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="4">Students panel</button>
+              <button type="button" class="inner-jumpbtn" data-inner-jump="5">Add/remove students</button>
+            </div>
+          </div>
+
+          <div class="media-slot" data-inner-steps="magnetboard-step8" style="margin-top:14px;">
+
+            <!-- 8.1 -->
+            <div data-inner-step="1">
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>8.1 — Two-panel layout</strong>
+                    <div class="muted">
+                      <ul>
+                        <li><strong>Left panel: Main Section</strong> (section definition and structural truth)</li>
+                        <li><strong>Right panel: Students</strong> (roster management and subgrouping)</li>
+                      </ul>
+                      <p>This is where the schedule becomes precise and auditable.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-edit-section-two-panels.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-edit-section-two-panels.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8.2 -->
+            <div data-inner-step="2" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>8.2 — Main Section fields (what’s visible)</strong>
+                    <div class="muted">
+                      <ul>
+                        <li><strong>Section #</strong> (editable text, e.g., “Section 3”)</li>
+                        <li><strong>Course</strong> with link <strong>Change&hellip;</strong></li>
+                        <li><strong>Teacher</strong> shown as a pill:
+                          <ul>
+                            <li>Small <strong>x</strong> to remove teacher</li>
+                            <li>Link <strong>Change&hellip;</strong></li>
+                            <li>Link <strong>Add Another Teacher</strong> (co-teaching supported)</li>
+                          </ul>
+                        </li>
+                        <li><strong>Classroom</strong> (room number) with:
+                          <ul>
+                            <li>Small <strong>x</strong> to clear room</li>
+                            <li>Link <strong>Change&hellip;</strong></li>
+                          </ul>
+                        </li>
+                        <li><strong>Period(s)</strong> showing assigned period (e.g., Period 1) with:
+                          <ul>
+                            <li>Small <strong>x</strong> to remove the period assignment</li>
+                            <li>Link <strong>Add Period</strong> (multi-period blocks supported)</li>
+                          </ul>
+                        </li>
+                        <li><strong>Add Team/Label</strong> link (attach grouping metadata to this section)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-edit-section-main-fields.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-edit-section-main-fields.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8.3 -->
+            <div data-inner-step="3" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>8.3 — Quarters and Days selectors</strong>
+                    <div class="muted">
+                      <ul>
+                        <li><strong>Quarters</strong>: Q1, Q2, Q3, Q4 as selectable checkboxes/tiles.</li>
+                        <li><strong>Days</strong>: Day 1 through Day 5 as selectable checkboxes/tiles.</li>
+                      </ul>
+                      <p>
+                        These controls define the section’s calendar footprint: when it runs, and on which day-cycle pattern.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-edit-section-quarters-days.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-edit-section-quarters-days.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8.4 -->
+            <div data-inner-step="4" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>8.4 — Students panel (counts + grouping)</strong>
+                    <div class="muted">
+                      <p>Right panel header shows:</p>
+                      <ul>
+                        <li><strong>Students</strong></li>
+                        <li><strong>Total Students</strong>: (e.g., 21)</li>
+                      </ul>
+
+                      <p>Students can be grouped by section type, such as:</p>
+                      <ul>
+                        <li>Main Section (course + code) with count</li>
+                        <li>Inclusion Subsection (course + code) with count</li>
+                      </ul>
+
+                      <p>
+                        This indicates Edario supports linked subsections (e.g., inclusion/push-in support).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-edit-section-students-panel.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-edit-section-students-panel.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8.5 -->
+            <div data-inner-step="5" hidden>
+              <div class="inner-grid-2">
+                <div class="inner-left">
+                  <div class="callout" style="margin:0;">
+                    <strong>8.5 — Student row controls (editable)</strong>
+                    <div class="muted">
+                      <p>Each student row shows:</p>
+                      <ul>
+                        <li>Checkbox (supports multi-select)</li>
+                        <li>Student name + grade (e.g., “Test, Student 18986 (9th)”)</li>
+                        <li>Small lock icon on the row (lock state for that student placement)</li>
+                        <li><strong>x</strong> on the far right (remove student from the section)</li>
+                      </ul>
+
+                      <p>Other visible behaviors:</p>
+                      <ul>
+                        <li>Scrollable student list (supports large rosters)</li>
+                        <li>A small dropdown arrow near the checkbox region (suggests bulk actions/select controls)</li>
+                        <li><strong>Add Student</strong> button with plus icon (bottom-right) to manually enroll students</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="callout" style="margin:12px 0 0;">
+                    <small>
+                      <strong>Use Edit Section when</strong>: you need precise fixes (teacher/room/period changes) or student-level tuning.
+                      Drag-and-drop is fast; Edit Section is exact.
+                    </small>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <div class="inner-video-shell">
+                    <video class="step-video" controls loop autoplay muted playsinline preload="metadata"
+                      src="assets/videos/magnetboard-edit-section-student-row-controls.mp4">
+                      Sorry, your browser doesn&rsquo;t support embedded videos.
+                    </video>
+                  </div>
+                  <div class="muted" style="margin-top:8px; font-size:12px;">
+                    Replace <code>magnetboard-edit-section-student-row-controls.mp4</code> with your real filename.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="btn-row inner-nav" data-inner-nav="magnetboard-step8" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; width:100%;">
+            <button class="btn-solid ghost" type="button" data-inner-prev>Previous</button>
+            <button class="btn-solid" type="button" data-inner-next>Next</button>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ok" data-complete type="button">Finish Magnetboard Docs</button>
+            <button class="btn-solid ghost" data-toggle type="button">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+        STEP 9 — Recommended workflow playbook (best practice)
+      ========================================================== -->
+      <div class="step" data-step="9" data-locked="false">
+        <div class="step-head">
+          <div class="step-left">
+            <div class="step-num">9</div>
+            <div class="step-title">
+              <strong>Recommended workflow</strong>
+              <span>The smart order schools follow</span>
+            </div>
+          </div>
+          <div class="step-right">
+            <span class="chip" data-chip>In Progress</span>
+            <button class="btn-solid ghost" data-toggle type="button">Open</button>
+          </div>
+        </div>
+
+        <div class="step-body">
+          <p>
+            Magnetboard works best when schools follow a consistent flow: start with headline indicators, place what’s unplaced,
+            fix conflicts, reduce warnings, validate with reports, then fine-tune via Edit Section.
+          </p>
+
+          <div class="callout" style="margin:12px 0 0;">
+            <strong>Best-practice playbook</strong>
+            <div class="muted">
+              <ol>
+                <li>
+                  <strong>Start with health indicators</strong>
+                  <ul>
+                    <li>Check <strong>Match %</strong></li>
+                    <li>Note <strong>Conflicts</strong> and <strong>Warnings</strong> counts</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Place what’s unplaced first</strong>
+                  <ul>
+                    <li>Use links like <strong>Unplaced sections</strong></li>
+                    <li>Use search to find the teacher/course quickly</li>
+                    <li>Drag cards into open <strong>+</strong> slots</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Fix hard conflicts (blockers)</strong>
+                  <ul>
+                    <li>Click <strong>See all</strong> and work Conflicts first</li>
+                    <li>Resolve teacher/room double-bookings via move or Edit Section</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Reduce warnings (quality improvements)</strong>
+                  <ul>
+                    <li>Warnings may be non-fatal but can indicate poor distribution/quality</li>
+                    <li>Fix what matters most to the school’s priorities</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Validate using Reports</strong>
+                  <ul>
+                    <li>Schedule Summary: low matched courses, seat issues, unplaced sections</li>
+                    <li>Conflict Matrix: biggest course clashes</li>
+                    <li>Section Balancing: period/day distribution + lab overload</li>
+                    <li>Student Summary: final student-level audit</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Fine-tune exact section definitions</strong>
+                  <ul>
+                    <li>Add co-teachers</li>
+                    <li>Adjust days/quarters</li>
+                    <li>Add or change periods</li>
+                    <li>Manually add/remove students (and maintain inclusion subsections)</li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Ignore only what you accept</strong>
+                  <ul>
+                    <li>Use Ignored Conflicts / Ignored Warnings for intentional exceptions</li>
+                    <li>Keeps remaining list meaningful</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="btn-row" style="margin-top:14px; display:flex; justify-content:flex-start; gap:12px; flex-wrap:wrap;">
+            <button class="btn-solid ok" data-complete type="button">Mark Magnetboard Complete</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /steps -->
+  </div><!-- /panel -->
+</section>
